@@ -1,5 +1,6 @@
 package entity.life;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Lesson {
@@ -37,12 +38,23 @@ public class Lesson {
         return startDate;
     }
 
+    public String getFormatStartDate(){
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(startDate.getTime());
+    }
+
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
     public Date getEndDate() {
         return endDate;
+    }
+
+    public String getFormatEndDate(){
+        if(endDate==null) return "未结束";
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(endDate.getTime());
     }
 
     public void setEndDate(Date endDate) {
@@ -52,5 +64,16 @@ public class Lesson {
     public Lesson studyLesson(){
         Lesson lesson=new Lesson();
         return lesson;
+    }
+
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "name='" + name + '\'' +
+                ", teacher=" + teacher.getName() +
+                ", book=" + book.getName() +
+                ", startDate=" + getFormatStartDate() +
+                ", endDate=" + getFormatEndDate() +
+                '}';
     }
 }

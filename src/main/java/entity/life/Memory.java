@@ -1,5 +1,6 @@
 package entity.life;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Memory {
@@ -17,7 +18,7 @@ public class Memory {
     public String toString() {
         return "Memory{" +
                 "describe='" + describe + '\'' +
-                ", createDate=" + createDate +
+                ", createDate=" + getFormatCreateDate() +
                 '}';
     }
 
@@ -35,5 +36,10 @@ public class Memory {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public String getFormatCreateDate(){
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(createDate.getTime());
     }
 }

@@ -1,5 +1,6 @@
 package entity.life;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Work {
@@ -27,8 +28,8 @@ public class Work {
                 ", companyAddress='" + companyAddress + '\'' +
                 ", salary=" + salary +
                 ", position='" + position + '\'' +
-                ", startDate=" + startDate;
-        work += this.endDate == null ? "" : ", endDate=" + endDate;
+                ", startDate=" + getFormatStartDate();
+        work += this.endDate == null ? "" : ", endDate=" + getFormatEndDate();
         work += '}';
         return work;
     }
@@ -77,11 +78,22 @@ public class Work {
         this.startDate = startDate;
     }
 
+    public String getFormatStartDate(){
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(startDate.getTime());
+    }
+
     public Date getEndDate() {
         return endDate;
     }
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public String getFormatEndDate(){
+        if(endDate==null) return "在职";
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(endDate.getTime());
     }
 }

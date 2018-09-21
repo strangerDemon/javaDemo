@@ -225,38 +225,39 @@ public class Person {
     @Override
     public String toString() {
         String person = "Person{" +
-                "name='" + name + '\'' +
-                ", sex=" + sex +
-                ", age=" + age +
-                ", height=" + height +
-                ", weight=" + weight +
-                ", bornDate=" + bornDate;
-        person += deadDate == null ? "" : ", deadDate=" + deadDate;
-        person += ", address='" + address + '\'' +
+                "\n\rname='" + name + '\'' +
+                ", \n\rsex=" + sex +
+                ", \n\rage=" + age +
+                ", \n\rheight=" + height +
+                ", \n\rweight=" + weight +
+                ", \n\rbornDate=" + bornDate;
+        person += deadDate == null ? "" : ", \n\rdeadDate=" + deadDate;
+        person += ", \n\raddress='" + address + '\'' +
                 ", education=" + education;
         if (houses != null) {
+            person += ", \n\rAllHourse:";
             for (House house : houses) {
-                person += ", houses=" + houses.toString();
+                person += "\n\r\rhouses=" + houses.toString();
             }
         }
         if (houses != null) {
             for (Work work : works) {
-                person += ", work=" + work.toString();
+                person += "\n\n work=" + work.toString();
             }
         }
         if (interests != null) {
             for (Interest interest : interests) {
-                person += ", interest=" + interest.toString();
+                person += "\n\r\rinterest=" + interest.toString();
             }
         }
         if (lessons != null) {
             for (Lesson lesson : lessons) {
-                person += ", lesson=" + lesson.toString();
+                person += "\n\r\rlesson=" + lesson.toString();
             }
         }
         if (memoryList != null) {
             for (Memory memory : memoryList) {
-                person += ", memory=" + memory.toString();
+                person += "\n\r\rmemory=" + memory.toString();
             }
         }
         return person;

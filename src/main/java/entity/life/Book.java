@@ -1,5 +1,6 @@
 package entity.life;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Book {
@@ -31,9 +32,23 @@ public class Book {
         this.publishDate = publishDate;
     }
 
+    public String getFormatStartDate(){
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(publishDate.getTime());
+    }
+
     public Book buyBook(){
         Book book=new Book();
 
         return book;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", pubisher=" + pubisher.getName() +
+                ", publishDate=" + getFormatStartDate() +
+                '}';
     }
 }

@@ -1,5 +1,6 @@
 package entity.life;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class House {
@@ -51,11 +52,32 @@ public class House {
         this.buyDate = buyDate;
     }
 
+    public String getFormatBuyDate(){
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(buyDate.getTime());
+    }
+
     public Date getSellDate() {
         return sellDate;
     }
 
     public void setSellDate(Date sellDate) {
         this.sellDate = sellDate;
+    }
+
+    public String getFormatSellDate(){
+        if(sellDate==null)return "未出售";
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        return format.format(sellDate.getTime());
+    }
+    @Override
+    public String toString() {
+        return "House{" +
+                "address='" + address + '\'' +
+                ", area=" + area +
+                ", price=" + price +
+                ", buyDate=" + getFormatBuyDate() +
+                ", sellDate=" + getFormatSellDate() +
+                '}';
     }
 }
