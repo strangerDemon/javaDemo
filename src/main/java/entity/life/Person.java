@@ -23,6 +23,8 @@ public class Person {
     private List<Interest> interests;
     private List<Lesson> lessons;
 
+    private GirlFriend myGirlFrined;
+
     private List<Memory> memoryList;
 
 
@@ -202,6 +204,21 @@ public class Person {
 
     public void setLiving(boolean living) {
         this.living = living;
+    }
+
+    public GirlFriend getMyGirlFrined() {
+        return myGirlFrined;
+    }
+
+    public void meetAGirlFrined(){
+
+    }
+    public void setMyGirlFrined(GirlFriend myGirlFrined) {
+        this.myGirlFrined = myGirlFrined;
+    }
+
+    public boolean haveGirlFriend(){
+        return this.myGirlFrined!=null;
     }
 
     //endregion

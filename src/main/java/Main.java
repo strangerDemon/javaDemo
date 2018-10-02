@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Person I=Person.born(Sex.MALE,"demo");
+
         while(I.getAge()<7){//paly stage
             Interest interest =Interest.getCurrentInterset(I.getAge());
             I.addAge();
@@ -17,6 +18,14 @@ public class Main {
             I.addAge();
         }
         I.setEducation(Education.BACHELOR);
+        while(!I.haveGirlFriend()){
+            try {
+                I.meetAGirlFrined();
+            }catch(Exception ex){
+                System.out.println("once more");
+            }
+        }
+
         /*while(I.isLiving()){//work
 
         }*/
