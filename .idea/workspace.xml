@@ -2,47 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/allLog.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/GirlFriend.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/House.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/Interest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/Lesson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/Memory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/Work.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/enumeration/Education.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/life/enumeration/Sex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FileUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/lesson.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/person.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/interest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/lesson.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/person.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/GirlFriend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/House.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/Interest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/Lesson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/Memory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/Work.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/enumeration/Education.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/life/enumeration/Sex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +80,9 @@
       <updated>1568104050697</updated>
       <workItem from="1568104053456" duration="3190000" />
       <workItem from="1568108357504" duration="754000" />
+      <workItem from="1568182336634" duration="1198000" />
+      <workItem from="1568202750240" duration="794000" />
+      <workItem from="1568275525956" duration="5643000" />
     </task>
     <servers />
   </component>
@@ -125,7 +94,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

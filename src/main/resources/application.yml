@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://xxxx:1433;databasename=CAS?autoReconnect=true&useSSL=false
+    username: demo
+    password: 123456
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    show-sql: true
+    database: SQLServer
+    # 使用innodb
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        #sql server需要填写schema的值,oracle则填写大写的数据库用户名,否则这两种数据库的ddl.auto的值不生效
+        #hibernate.default_schema:
+        #打开hibernate统计信息
+        #generate_statistics: true
+        show_sql: true
+        format_sql: true
+        # hibernate生成的sql注释
+        use_sql_comments: true
+        hbm2ddl:
+          auto: update
