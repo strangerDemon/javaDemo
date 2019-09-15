@@ -1,26 +1,28 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://xxxx:1433;databasename=CAS?autoReconnect=true&useSSL=false
+    url: jdbc:sqlserver://localhost:1433;databasename=CAS
     username: demo
     password: 123456
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   jpa:
     show-sql: true
-    database: SQLServer
-    # 使用innodb
+    database: SQL_SERVER
+    # 使锟斤拷innodb
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     hibernate:
       ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #澶у皬鍐欒浆鎹紝鍚﹀垯澶у啓浼氳杞垚 _灏忓啓
     properties:
       hibernate:
-        #sql server需要填写schema的值,oracle则填写大写的数据库用户名,否则这两种数据库的ddl.auto的值不生效
+        #sql server锟斤拷要锟斤拷写schema锟斤拷值,oracle锟斤拷锟斤拷写锟斤拷写锟斤拷锟斤拷锟捷匡拷锟矫伙拷锟斤拷,锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟捷匡拷锟絛dl.auto锟斤拷值锟斤拷锟斤拷效
         #hibernate.default_schema:
-        #打开hibernate统计信息
+        #锟斤拷hibernate统锟斤拷锟斤拷息
         #generate_statistics: true
         show_sql: true
         format_sql: true
-        # hibernate生成的sql注释
+        # hibernate锟斤拷锟缴碉拷sql注锟斤拷
         use_sql_comments: true
         hbm2ddl:
           auto: update
