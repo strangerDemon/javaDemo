@@ -1,14 +1,29 @@
 package com.learn.demo.Service;
 
-import com.learn.demo.Model.UserModel;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.learn.demo.Repository.UserRepository;
+import com.learn.demo.Entity.UserEntity;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+@Service
+public class UserService {
+    @Resource
+    private UserRepository userRepository;
 
-/**
- * @author demo
- * @date 2019/9/12 17:14
- */
-public interface UserService extends JpaRepository<UserModel, String> {
+    public UserEntity getOne(String s) {
+        return userRepository.getOne(s);
+    }
 
+    public void delete(UserEntity userModel) {
+        userRepository.delete(userModel);
+    }
 
+    public List<UserEntity> findAll() {
+        return userRepository.findAll();
+    }
+
+    public <S extends UserEntity> S saveAndFlush(S s) {
+        return userRepository.saveAndFlush(s);
+    }
 }

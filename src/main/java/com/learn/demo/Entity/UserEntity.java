@@ -1,4 +1,4 @@
-package com.learn.demo.Model;
+package com.learn.demo.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -14,8 +14,8 @@ import java.util.Date;
  * @date 2019/9/10 16:42
  */
 @Entity
-@Table(name = "User")
-public class UserModel {
+@Table(name = "BaseUser")
+public class UserEntity {
 
     @Id
     private String UserId;
