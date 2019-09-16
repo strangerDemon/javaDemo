@@ -15,8 +15,8 @@ public class UserService {
         return userRepository.getOne(s);
     }
 
-    public void delete(UserEntity userModel) {
-        userRepository.delete(userModel);
+    public void delete(UserEntity userEntity) {
+        userRepository.delete(userEntity);
     }
 
     public List<UserEntity> findAll() {
