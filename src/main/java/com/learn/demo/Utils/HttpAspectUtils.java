@@ -17,14 +17,14 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author demo
  * @date 2019/9/15 19:34
- * @description
+ * @description aop 截取所有调用接口
  */
 
 @Aspect
 @Component
-public class HttpAspect {
+public class HttpAspectUtils {
 
-    private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
+    private final static Logger logger = LoggerFactory.getLogger(HttpAspectUtils.class);
 
     @Pointcut("execution(public * com.learn.demo.Controller.*.*(..))")
     public void log(){

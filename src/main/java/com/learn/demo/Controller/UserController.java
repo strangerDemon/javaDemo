@@ -19,9 +19,15 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @RequestMapping("/GetUser")
-    public ResultModel GetUser(){
+    @RequestMapping("/GetAllUser")
+    public ResultModel GetAllUser(){
         List<UserEntity> list = userService.findAll();
         return ResultUtils.isOK(list);
+    }
+
+    @RequestMapping("/GetUser")
+    public ResultModel GetUser(String userId){
+        UserEntity entity = userService.getOne(userId);
+        return ResultUtils.isOK(entity);
     }
 }

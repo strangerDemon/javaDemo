@@ -13,7 +13,14 @@ public class ResultUtils {
         return new ResultModel(ResultEnum.SUCCESS, data);
     }
 
-    public static ResultModel isError(String msg) {
+    public static ResultModel isError() {
         return new ResultModel(ResultEnum.ERROR, null);
     }
+
+    public static ResultModel isError(String msg) {
+        ResultModel result= new ResultModel(ResultEnum.ERROR, null);
+        result.setMsg(msg);
+        return result;
+    }
+
 }
