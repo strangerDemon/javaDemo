@@ -1,8 +1,8 @@
 package com.learn.demo.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,139 +15,136 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "BaseUser")
+@JsonInclude(JsonInclude.Include.NON_NULL) //null不返回
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"}) //类注解，作用是json序列化时将java bean中的一些属性忽略掉，序列化和反序列化都受影响。
 public class UserEntity {
 
     @Id
-    private String UserId;
-    private String Account;
+    private String userId;
+    private String account;
     @JsonIgnore
-    private String Password;
-    private String RealName;
-    private String HeadIcon;
-    private int Gender;
-    private Date Birthday;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String Mobile;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String Telephone;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String Email;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String WeChat;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String Description;
+    private String password;
+    private String realName;
+    private String headIcon;
+    private int gender;
+    private Date birthday;
+    private String mobile;
+    private String telephone;
+    private String email;
+    private String weChat;
+    private String description;
 
     public String getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(String userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
     public String getAccount() {
-        return Account;
+        return account;
     }
 
     public void setAccount(String account) {
-        Account = account;
+        this.account = account;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
     public String getRealName() {
-        return RealName;
+        return realName;
     }
 
     public void setRealName(String realName) {
-        RealName = realName;
+        this.realName = realName;
     }
 
     public String getHeadIcon() {
-        return HeadIcon;
+        return headIcon;
     }
 
     public void setHeadIcon(String headIcon) {
-        HeadIcon = headIcon;
+        this.headIcon = headIcon;
     }
 
     public int getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(int gender) {
-        Gender = gender;
+        this.gender = gender;
     }
 
     public Date getBirthday() {
-        return Birthday;
+        return birthday;
     }
 
     public void setBirthday(Date birthday) {
-        Birthday = birthday;
+        this.birthday = birthday;
     }
 
     public String getMobile() {
-        return Mobile;
+        return mobile;
     }
 
     public void setMobile(String mobile) {
-        Mobile = mobile;
+        this.mobile = mobile;
     }
 
     public String getTelephone() {
-        return Telephone;
+        return telephone;
     }
 
     public void setTelephone(String telephone) {
-        Telephone = telephone;
+        this.telephone = telephone;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getWeChat() {
-        return WeChat;
+        return weChat;
     }
 
     public void setWeChat(String weChat) {
-        WeChat = weChat;
+        this.weChat = weChat;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "UserModel{" +
-                "UserId='" + UserId + '\'' +
-                ", Account='" + Account + '\'' +
-                ", Password='" + Password + '\'' +
-                ", RealName='" + RealName + '\'' +
-                ", HeadIcon='" + HeadIcon + '\'' +
-                ", Gender=" + Gender +
-                ", Birthday=" + Birthday +
-                ", Mobile='" + Mobile + '\'' +
-                ", Telephone='" + Telephone + '\'' +
-                ", Email='" + Email + '\'' +
-                ", WeChat='" + WeChat + '\'' +
-                ", Description='" + Description + '\'' +
+        return "UserEntity{" +
+                "userId='" + userId + '\'' +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", realName='" + realName + '\'' +
+                ", headIcon='" + headIcon + '\'' +
+                ", gender=" + gender +
+                ", birthday=" + birthday +
+                ", mobile='" + mobile + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", email='" + email + '\'' +
+                ", weChat='" + weChat + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
