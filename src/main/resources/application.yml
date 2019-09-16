@@ -1,28 +1,46 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databasename=CAS
-    username: demo
-    password: 123456
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databasename=CAS #连接地址
+    username: demo  #账号
+    password: 123456 #密码
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver #驱动
 
-  jpa:
+  jpa: #Java Persistence API，Java持久层API
     show-sql: true
-    database: SQL_SERVER
-    # ʹ��innodb
+    database: SQL_SERVER #
+    #使用innodb
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     hibernate:
       ddl-auto: update
+      #create 启动时删数据库中的表，然后创建，退出时不删除数据表
+      #create-drop 启动时删数据库中的表，然后创建，退出时删除数据表 如果表不存在报错
+      #update 如果启动时表格式不一致则更新表，原有数据保留
+      #validate 项目启动表结构进行校验 如果不一致则报错
       naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #大小写转换，否则大写会被转成 _小写
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #大小写转换，否则默认大写会被转成 _小写（eg:UserId=>user_id）
     properties:
       hibernate:
-        #sql server��Ҫ��дschema��ֵ,oracle����д��д�����ݿ��û���,�������������ݿ��ddl.auto��ֵ����Ч
+        #sql server需要填写schema的值,oracle则填写大写的数据库用户名,否则这两种数据库的ddl.auto的值不生效
         #hibernate.default_schema:
-        #��hibernateͳ����Ϣ
+        #打开hibernate统计信息
         #generate_statistics: true
         show_sql: true
         format_sql: true
-        # hibernate���ɵ�sqlע��
+        #hibernate生成的sql注释
         use_sql_comments: true
         hbm2ddl:
           auto: update
+
+  #redis 配置
+  redis:
+    database: 0
+    host: localhost
+    lettuce:
+      pool:
+        max-active: 8   #最大连接数据库连接数,设 0 为没有限制
+        max-idle: 8     #最大等待连接中的数量,设 0 为没有限制
+        max-wait: -1ms  #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+        min-idle: 0     #最小等待连接中的数量,设 0 为没有限制
+      shutdown-timeout: 100ms
+    password: '123456'
+    port: 6379
