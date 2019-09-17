@@ -1,9 +1,6 @@
-package com.learn.demo.Utils;
+package com.learn.demo.Aspect;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -22,18 +19,22 @@ import javax.servlet.http.HttpServletRequest;
 
 @Aspect
 @Component
-public class HttpAspectUtils {
+public class HttpAspect {
 
-    private final static Logger logger = LoggerFactory.getLogger(HttpAspectUtils.class);
+    private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
     @Pointcut("execution(public * com.learn.demo.Controller.*.*(..))")
     public void log(){
 
     }
 
+    /**
+     * 请求前
+     * @param joinPoint joinPoint
+     */
     @Before("log()")
-    public void AspectBefore(JoinPoint joinPoint){
-        logger.info("AspectBefore");
+    public void aspectBefore(JoinPoint joinPoint){
+        logger.info("aspectBefore");
         ServletRequestAttributes attributes= (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
         assert attributes != null;
         HttpServletRequest request=attributes.getRequest();
@@ -49,8 +50,21 @@ public class HttpAspectUtils {
         logger.info("args={}",joinPoint.getArgs());
     }
 
+    /**
+     * 请求后
+     * @param joinPoint joinPoint
+     */
     @After("log()")
-    public void AspectAfter(){
-        logger.info("AspectAfter");
+    public void aspectAfter(JoinPoint joinPoint){
+        logger.info("aspectAfter");
+    }
+
+    /**
+     * 返回前
+     * @param object 返回参数
+     */
+    @AfterReturning(returning = "object",pointcut = "log()")
+    public void aspectReturn(Object object){
+        logger.info("response={}",object.toString());
     }
 }
