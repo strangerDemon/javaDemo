@@ -29,3 +29,9 @@ build/
 
 ### VS Code ###
 .vscode/
+/logs/2019-09-17)/debug.html
+/logs/2019-09-17)/error.html
+/logs/2019-09-17)/info.html
+/logs/2019-09-17)/log.html
+/logs/2019-09-17)/log.log
+/logs/2019-09-17)/warn.html

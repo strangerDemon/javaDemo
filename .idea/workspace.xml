@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="request/response logger">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="redis">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Handler/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Handler/ExceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/MyExceptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/MyExceptionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/SystemConfigModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/SystemConfigModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/system.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/system.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +24,20 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="310" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,6 +63,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -51,7 +74,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources" />
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\db" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -99,13 +128,19 @@
       </method>
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
+      <module name="Spring-Boot-Demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.demo.DemoApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.UserServiceTest.getByUserId" />
+      <item itemvalue="JUnit.UserServiceTest.getOne" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserServiceTest.getByUserId" />
@@ -132,6 +167,7 @@
       <workItem from="1568335441935" duration="3053000" />
       <workItem from="1568516916886" duration="9708000" />
       <workItem from="1568543337106" duration="6422000" />
+      <workItem from="1568594635689" duration="54788000" />
     </task>
     <task id="LOCAL-00001" summary="单元测试">
       <created>1568549331484</created>
@@ -175,7 +211,91 @@
       <option name="project" value="LOCAL" />
       <updated>1568549614057</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="readme">
+      <created>1568614667859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568614667860</updated>
+    </task>
+    <task id="LOCAL-00008" summary="database">
+      <created>1568614981348</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568614981348</updated>
+    </task>
+    <task id="LOCAL-00009" summary="controller">
+      <created>1568618109542</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568618109542</updated>
+    </task>
+    <task id="LOCAL-00010" summary="entity">
+      <created>1568618146400</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568618146400</updated>
+    </task>
+    <task id="LOCAL-00011" summary="repository">
+      <created>1568618180974</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1568618180974</updated>
+    </task>
+    <task id="LOCAL-00012" summary="service">
+      <created>1568618209074</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568618209074</updated>
+    </task>
+    <task id="LOCAL-00013" summary="utils">
+      <created>1568618295482</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568618295482</updated>
+    </task>
+    <task id="LOCAL-00014" summary="redis">
+      <created>1568635677062</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1568635677062</updated>
+    </task>
+    <task id="LOCAL-00015" summary="log">
+      <created>1568701537546</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1568701537546</updated>
+    </task>
+    <task id="LOCAL-00016" summary="custom read yml">
+      <created>1568701609425</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1568701609425</updated>
+    </task>
+    <task id="LOCAL-00017" summary="result">
+      <created>1568701650190</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1568701650190</updated>
+    </task>
+    <task id="LOCAL-00018" summary="aspect">
+      <created>1568701843748</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1568701843748</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,14 +322,26 @@
     <MESSAGE value="handle exception" />
     <MESSAGE value="custom exception" />
     <MESSAGE value="request/response logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="request/response logger" />
+    <MESSAGE value="readme" />
+    <MESSAGE value="database" />
+    <MESSAGE value="controller" />
+    <MESSAGE value="entity" />
+    <MESSAGE value="repository" />
+    <MESSAGE value="service" />
+    <MESSAGE value="utils" />
+    <MESSAGE value="redis" />
+    <MESSAGE value="log" />
+    <MESSAGE value="custom read yml" />
+    <MESSAGE value="result" />
+    <MESSAGE value="aspect" />
+    <option name="LAST_COMMIT_MESSAGE" value="aspect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java</url>
-          <line>22</line>
+          <line>26</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -221,6 +353,31 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java</url>
           <line>24</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppAuthController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppAuthController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
