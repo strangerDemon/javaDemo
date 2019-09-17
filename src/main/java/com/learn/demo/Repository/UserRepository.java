@@ -9,4 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2019/9/12 17:14
  */
 public interface UserRepository extends JpaRepository<UserEntity, String> {
+    UserEntity getByAccount(String account);
 }

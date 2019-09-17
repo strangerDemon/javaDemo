@@ -86,8 +86,7 @@ public class RedisUtils {
      */
     public Set<String> getAllKey()
     {
-        String prefix = "*";
-        return stringRedisTemplate.keys(prefix);
+        return stringRedisTemplate.keys("*");
     }
 
     /**
@@ -109,8 +108,7 @@ public class RedisUtils {
      * 清空所有缓存
      */
     public  void deleteAll() {
-        String prefix = "*";
-        Set<String> keys = stringRedisTemplate.keys(prefix);
+        Set<String> keys = stringRedisTemplate.keys("*");
         assert keys != null;
         for (String key : keys) {
             stringRedisTemplate.delete(key);

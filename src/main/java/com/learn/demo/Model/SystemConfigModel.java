@@ -21,6 +21,8 @@ public class SystemConfigModel {
     //@Value("${system.redisTimeOut}")
     private Integer redisTimeOut;
 
+    private String encryptKey;
+
     public Integer getRedisTimeOut() {
         return redisTimeOut;
     }
@@ -29,10 +31,19 @@ public class SystemConfigModel {
         this.redisTimeOut = redisTimeOut;
     }
 
+    public String getEncryptKey() {
+        return encryptKey;
+    }
+
+    public void setEncryptKey(String encryptKey) {
+        this.encryptKey = encryptKey;
+    }
+
     @Override
     public String toString() {
         return "SystemConfigModel{" +
                 "redisTimeOut=" + redisTimeOut +
+                ", encryptKey='" + encryptKey + '\'' +
                 '}';
     }
 }

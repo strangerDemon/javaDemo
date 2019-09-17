@@ -7,6 +7,12 @@ import com.learn.demo.Enum.ResultEnum;
  */
 public class MyExceptionModel  extends RuntimeException{
     private Integer code;
+
+    public MyExceptionModel(String msg){
+        super(msg);
+        this.code=ResultEnum.ERROR.getCode();
+    }
+
     public MyExceptionModel(int code,String msg){
         super(msg);
         this.code=code;

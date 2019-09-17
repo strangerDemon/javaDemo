@@ -15,6 +15,10 @@ public class UserService {
         return userRepository.getOne(s);
     }
 
+    public UserEntity getByAccount(String account){
+        return userRepository.getByAccount(account);
+    }
+
     public void delete(UserEntity userEntity) {
         userRepository.delete(userEntity);
     }
