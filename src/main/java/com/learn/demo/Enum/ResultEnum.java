@@ -4,7 +4,7 @@ package com.learn.demo.Enum;
  * 返回枚举，统一维护返回类型
  */
 public enum ResultEnum {
-    UNKNOW(-1,"未知"),
+    UNKNOWN(-1,"未知"),
     ERROR(0,"失败"),
     SUCCESS(1,"成功");
 

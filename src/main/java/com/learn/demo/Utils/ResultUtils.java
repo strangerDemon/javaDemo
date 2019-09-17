@@ -23,4 +23,8 @@ public class ResultUtils {
         return result;
     }
 
+    public static ResultModel isUnKnow(){
+        return new ResultModel(ResultEnum.UNKNOWN, null);
+    }
+
 }
