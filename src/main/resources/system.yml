@@ -1,0 +1,3 @@
+#自定义的配置参数
+system:
+  redisTimeOut: 180 #过期时间单位秒s
