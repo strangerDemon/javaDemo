@@ -57,15 +57,15 @@ public class UserController {
     }
 
     @RequestMapping("/UserLogin")
-    public ResultModel UserLogin(@RequestParam Map<String,String>param) {
-        String encryptPS = EncryptUtils.encrypt(param.get("password)"));
-        UserEntity entity = userService.getByAccount(param.get("account"));
-        if (entity == null) {
+    public ResultModel UserLogin(@RequestBody UserEntity entity) {
+        String encryptPS = EncryptUtils.encrypt(entity.getPassword());
+        UserEntity user = userService.getByAccount(entity.getAccount());
+        if (user == null) {
             throw new MyExceptionModel("账号不存在!");
         }
         if (encryptPS.equals(entity.getPassword())) {
             throw new MyExceptionModel("密码不正确!");
         }
-        return ResultUtils.isOK(userService.saveAndFlush(entity));
+        return ResultUtils.isOK(user);
     }
 }
