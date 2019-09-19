@@ -13,9 +13,10 @@ import java.util.List;
 /**
  * @author demo
  * @date 2019/9/16 14:35
- * @description
+ * @description CasLog Cas登录日志表的增删改查
  */
 @RestController
+@RequestMapping("/CasLog")
 public class CasLogController {
     @Resource
     private CasLogService casLogService;

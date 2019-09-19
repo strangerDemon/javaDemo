@@ -13,9 +13,10 @@ import java.util.List;
 /**
  * @author demo
  * @date 2019/9/16 14:35
- * @description
+ * @description 对应CasClientLog 客户端登录日志表 的增删改查
  */
 @RestController
+@RequestMapping("/CasClientLog")
 public class CasClientLogController {
     @Resource
     private CasClientLogService casClientLogService;

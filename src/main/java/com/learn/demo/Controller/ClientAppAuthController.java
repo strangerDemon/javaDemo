@@ -13,9 +13,10 @@ import java.util.List;
 /**
  * @author demo
  * @date 2019/9/16 14:34
- * @description
+ * @description ClientAppAuth 用户的客户端权限表的增删改查
  */
 @RestController
+@RequestMapping("/ClientAppAuth")
 public class ClientAppAuthController {
     @Resource
     private ClientAppAuthService clientAppAuthService;

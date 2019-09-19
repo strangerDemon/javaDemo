@@ -13,9 +13,10 @@ import java.util.List;
 /**
  * @author demo
  * @date 2019/9/16 14:33
- * @description
+ * @description ClientApp 客户端表的增删改查
  */
 @RestController
+@RequestMapping("/ClientApp")
 public class ClientAppController {
     @Resource
     private ClientAppService clientAppService;
