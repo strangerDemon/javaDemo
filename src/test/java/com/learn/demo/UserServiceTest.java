@@ -21,8 +21,8 @@ public class UserServiceTest {
     private UserService userService;
 
     @Test
-    public void getByUserId(){
-        List<UserEntity> list=userService.findAll();
-        Assert.assertEquals("123456",list.get(0).getPassword());
+    public void getByAccount(){
+        UserEntity user=userService.getByAccount("demo");
+        Assert.assertEquals("123456",user.getPassword());
     }
 }

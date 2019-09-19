@@ -30,7 +30,7 @@ public class HttpAspect {
 
     /**
      * 请求前
-     * @param joinPoint joinPoint
+     * @param joinPoint 封装了SpringAop中切面方法的信息
      */
     @Before("log()")
     public void aspectBefore(JoinPoint joinPoint){

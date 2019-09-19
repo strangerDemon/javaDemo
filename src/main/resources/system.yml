@@ -1,5 +1,5 @@
 #自定义的配置参数
 system:
-  redisTimeOut: 180 #过期时间单位秒s
+  redisTimeOut: 1800 #过期时间单位秒s
 
   encryptKey: "123456789encrypt" #加密 16位

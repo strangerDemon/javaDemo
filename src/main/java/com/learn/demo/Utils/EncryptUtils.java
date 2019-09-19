@@ -28,7 +28,7 @@ public class EncryptUtils {
     private SystemConfigModel systemConfig;
 
     private static EncryptUtils encryptUtils;
-    // 初始化的时候，将本类中的sysConfigManager赋值给静态的本类变量
+    // 初始化的时候，将本类中的EncryptUtils赋值给静态的本类变量
     @PostConstruct
     public void init() {
         encryptUtils=this;
@@ -51,7 +51,7 @@ public class EncryptUtils {
     private static String encrypt(String data,String key) {
         try {
             if(data==null){
-                throw new MyExceptionModel("加密数据未空！");
+                throw new MyExceptionModel("加密数据为空！");
             }
             Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");//"算法/模式/补码方式"NoPadding PkcsPadding
             int blockSize = cipher.getBlockSize();
