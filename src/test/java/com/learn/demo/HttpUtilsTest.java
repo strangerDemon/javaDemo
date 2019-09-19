@@ -30,7 +30,8 @@ public class HttpUtilsTest {
             json.put("sessionIdKey", "");
             json.put("sessionIdValue", "");
             String url = "http://localhost:19433/cas/VerifyTicket";
-            JSONObject result = httpUtils.HttpPost(url, json);
+            String result = httpUtils.HttpPostForString(url, json);
+            System.out.println("result:"+result);
         } catch (Exception ex) {
             ex.getStackTrace();
         }
