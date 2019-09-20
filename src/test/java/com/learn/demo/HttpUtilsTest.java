@@ -1,7 +1,7 @@
 package com.learn.demo;
 
 import com.alibaba.fastjson.JSONObject;
-import com.learn.demo.Utils.HttpUtils;
+import com.learn.demo.utils.HttpUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,7 +30,7 @@ public class HttpUtilsTest {
             json.put("sessionIdKey", "");
             json.put("sessionIdValue", "");
             String url = "http://localhost:19433/cas/VerifyTicket";
-            String result = httpUtils.HttpPostForString(url, json);
+            String result = httpUtils.httpPostForString(url, json);
             System.out.println("result:"+result);
         } catch (Exception ex) {
             ex.getStackTrace();

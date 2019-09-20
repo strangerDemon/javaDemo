@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="add">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/EncryptUtils.java" afterDir="false" />
+    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="google checkstyle">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/global/GlobalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Handler/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Handler/ExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/MyExceptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/MyExceptionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/SystemConfigModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/SystemConfigModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/RedisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/system.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/system.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Aspect/HttpAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/aspect/HttpAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/CasClientLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasClientLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/CasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/CasLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/_readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/CasClientLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasClientLogEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/CasLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasLogEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/ClientAppAuthEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppAuthEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/ClientAppEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Enum/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/ResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Grobal/GrobalConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Handler/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/handler/ExceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/FilterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/FilterModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/MyExceptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/MyExceptionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/ResultModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/ResultModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/SystemConfigModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/SystemConfigModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/_readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/CasClientLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasClientLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/CasLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/ClientAppAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppAuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/ClientAppRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/CasClientLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/CasClientLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/CasLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/CasLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/ClientAppAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/ClientAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Shiro/ShiroRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/CasUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/EncryptUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/HttpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ResultUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/YmlFactoryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/YmlFactoryUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learn/demo/HttpUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learn/demo/HttpUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +57,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="310" />
+    <option name="myElementSize" value="317" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -69,13 +105,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xml/googleCheck.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.splitter.proportion" value="0.24096386" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\db" />
     </key>
@@ -93,6 +134,70 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="HttpUtilsTest.GetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.HttpUtilsTest" />
+      <option name="METHOD_NAME" value="GetTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpUtilsTest.PostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.HttpUtilsTest" />
+      <option name="METHOD_NAME" value="PostTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getByAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.UserServiceTest" />
+      <option name="METHOD_NAME" value="getByAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getByUserId (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.UserServiceTest" />
+      <option name="METHOD_NAME" value="getByUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceTest.getByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -109,22 +214,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.getOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.UserServiceTest" />
-      <option name="METHOD_NAME" value="getOne" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Spring-Boot-Demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.demo.DemoApplication" />
@@ -136,13 +225,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UserServiceTest.getByUserId" />
-      <item itemvalue="JUnit.UserServiceTest.getOne" />
+      <item itemvalue="JUnit.HttpUtilsTest.GetTest" />
+      <item itemvalue="JUnit.UserServiceTest.getByUserId (1)" />
+      <item itemvalue="JUnit.UserServiceTest.getByAccount" />
+      <item itemvalue="JUnit.HttpUtilsTest.PostTest" />
       <item itemvalue="Spring Boot.DemoApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HttpUtilsTest.PostTest" />
+        <item itemvalue="JUnit.UserServiceTest.getByAccount" />
+        <item itemvalue="JUnit.UserServiceTest.getByUserId (1)" />
+        <item itemvalue="JUnit.HttpUtilsTest.GetTest" />
         <item itemvalue="JUnit.UserServiceTest.getByUserId" />
-        <item itemvalue="JUnit.UserServiceTest.getOne" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +260,8 @@
       <workItem from="1568335441935" duration="3053000" />
       <workItem from="1568516916886" duration="9708000" />
       <workItem from="1568543337106" duration="6422000" />
-      <workItem from="1568594635689" duration="54965000" />
+      <workItem from="1568594635689" duration="95504000" />
+      <workItem from="1568943480987" duration="13847000" />
     </task>
     <task id="LOCAL-00001" summary="单元测试">
       <created>1568549331484</created>
@@ -300,7 +396,70 @@
       <option name="project" value="LOCAL" />
       <updated>1568712776825</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add">
+      <created>1568712918268</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1568712918268</updated>
+    </task>
+    <task id="LOCAL-00021" summary="encrypt">
+      <created>1568808417080</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1568808417080</updated>
+    </task>
+    <task id="LOCAL-00022" summary="shiro">
+      <created>1568884102106</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1568884102106</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Structural optimization">
+      <created>1568884253851</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1568884253852</updated>
+    </task>
+    <task id="LOCAL-00024" summary="readme">
+      <created>1568884445983</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1568884445983</updated>
+    </task>
+    <task id="LOCAL-00025" summary="other">
+      <created>1568884490173</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1568884490173</updated>
+    </task>
+    <task id="LOCAL-00026" summary="cas init">
+      <created>1568893293688</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1568893293688</updated>
+    </task>
+    <task id="LOCAL-00027" summary="httpUtils">
+      <created>1568893313773</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1568893313773</updated>
+    </task>
+    <task id="LOCAL-00028" summary="GoogleStyle&#10;SimpleCheckStyle">
+      <created>1568958518884</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1568958518884</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,14 +479,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Result Enum&#10;connect sql&#10;logger" />
-    <MESSAGE value="单元测试" />
-    <MESSAGE value="connect sql" />
-    <MESSAGE value="Result" />
     <MESSAGE value="handle exception" />
     <MESSAGE value="custom exception" />
     <MESSAGE value="request/response logger" />
-    <MESSAGE value="readme" />
     <MESSAGE value="database" />
     <MESSAGE value="controller" />
     <MESSAGE value="entity" />
@@ -341,45 +495,62 @@
     <MESSAGE value="aspect" />
     <MESSAGE value="config" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="encrypt" />
+    <MESSAGE value="shiro" />
+    <MESSAGE value="Structural optimization" />
+    <MESSAGE value="readme" />
+    <MESSAGE value="other" />
+    <MESSAGE value="cas init" />
+    <MESSAGE value="httpUtils" />
+    <MESSAGE value="GoogleStyle&#10;SimpleCheckStyle" />
+    <MESSAGE value="google checkstyle" />
+    <option name="LAST_COMMIT_MESSAGE" value="google checkstyle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java</url>
-          <line>26</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java</url>
+          <line>30</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java</url>
-          <line>19</line>
+          <line>18</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppAuthController.java</url>
-          <line>24</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java</url>
+          <line>25</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppAuthController.java</url>
-          <line>30</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java</url>
+          <line>31</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/src/test/java/com/learn/demo/HttpUtilsTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="result" language="JAVA" />
+      </configuration>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="shiroFilter" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Spring_Boot_Demo$DemoApplication.ic" NAME="DemoApplication Coverage Results" MODIFIED="1568526466353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Spring_Boot_Demo$DemoApplication.ic" NAME="DemoApplication Coverage Results" MODIFIED="1568948753355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

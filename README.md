@@ -1,8 +1,8 @@
-#Spring-Boot-Demo
+# Spring-Boot-Demo
 
     learn spring-boot
 
-####架构
+## 后端框架
 
     SQL-Server
     
@@ -10,9 +10,19 @@
     
     Shiro
     
+    Lombok
     
-####目录结构
+## 前端框架
     
+    Vue
+    
+    Element-UI
+    
+    axios
+    
+    
+## 目录结构
+
     Aspect aop处理请求
     
     Controller 接口
@@ -35,10 +45,10 @@
     
     Utils 工具类
     
-####快捷键
+## 快捷键
 
     整理代码：Ctrl+alt+l
 
-    清除多余引包:ctrl+alt+o
+    整理引包:ctrl+alt+o
     
     折叠代码：ctrl+alt+t =>//region //endregion
