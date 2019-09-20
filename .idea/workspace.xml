@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/xml/googleCheck.xml" afterDir="false" />
+    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +216,7 @@
       <workItem from="1568516916886" duration="9708000" />
       <workItem from="1568543337106" duration="6422000" />
       <workItem from="1568594635689" duration="95504000" />
-      <workItem from="1568943480987" duration="20200000" />
+      <workItem from="1568943480987" duration="21607000" />
     </task>
     <task id="LOCAL-00001" summary="单元测试">
       <created>1568549331484</created>
@@ -432,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568970156622</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary=".">
+      <created>1568970271942</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1568970271942</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

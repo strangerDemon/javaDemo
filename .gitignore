@@ -32,3 +32,7 @@ build/
 
 ### log ###
 /logs/**
+
+### vue ###
+/front/node_modules/**
+/front/dist/**
