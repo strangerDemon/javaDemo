@@ -38,18 +38,17 @@ public class ShiroConfig {
     // 拦截器
     Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
-    //过滤路径
-    //    List<String> filterList = filterModel.getFilterList();
-    //    for (String path : filterList) {
-    //      filterChainDefinitionMap.put(path, DefaultFilter.authc.name());
-    //    }
-
     //不过滤的路径
     List<String> unFilterList = filterModel.getUnFilterList();
     for (String path : unFilterList) {
       filterChainDefinitionMap.put(path, DefaultFilter.anon.name());//不要权限的路径
     }
 
+    //过滤路径
+    List<String> filterList = filterModel.getFilterList();
+    for (String path : filterList) {
+      filterChainDefinitionMap.put(path, DefaultFilter.authc.name());
+    }
     // 添加自己的过滤器并且取名为jwt
     //        Map<String, Filter> filterMap = new HashMap<String, Filter>(1);
     //        filterMap.put("jwt", new JwtFilter());

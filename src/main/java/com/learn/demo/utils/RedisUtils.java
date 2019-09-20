@@ -54,7 +54,6 @@ public class RedisUtils {
     set(key, value, systemConfigModel.getRedisTimeOut(), TimeUnit.SECONDS);
   }
 
-
   /**
    * 获取单体.
    *
@@ -107,7 +106,6 @@ public class RedisUtils {
     }
     return data;
   }
-
 
   /**
    * 清空所有缓存.

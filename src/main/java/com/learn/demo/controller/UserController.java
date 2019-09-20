@@ -6,6 +6,7 @@ import com.learn.demo.service.UserService;
 import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,8 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
   @Resource
+  private HttpSession session;
+  @Resource
   private UserService userService;
-
   @Resource
   private RedisUtils redisUtils;
 
@@ -43,6 +45,6 @@ public class UserController {
 
   @RequestMapping("/UserLogin")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
-    return ResultUtils.isOK(userService.checkLogin(entity));
+    return ResultUtils.isOK(userService.checkLogin(session.getId(),entity));
   }
 }

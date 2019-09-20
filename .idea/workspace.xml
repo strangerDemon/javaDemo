@@ -1,54 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="google checkstyle">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/global/GlobalConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment=".">
+      <change afterPath="$PROJECT_DIR$/xml/googleCheck.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Aspect/HttpAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/aspect/HttpAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/CasClientLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasClientLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/CasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/CasLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/ClientAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Controller/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/_readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/CasClientLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasClientLogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/CasLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasLogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/ClientAppAuthEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppAuthEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/ClientAppEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Enum/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Grobal/GrobalConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Handler/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/handler/ExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/FilterModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/FilterModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/MyExceptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/MyExceptionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/ResultModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/ResultModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/SystemConfigModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/SystemConfigModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Model/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/_readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/CasClientLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasClientLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/CasLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/ClientAppAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppAuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/ClientAppRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/CasClientLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/CasClientLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/CasLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/CasLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/ClientAppAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/ClientAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Shiro/ShiroRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/CasUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/EncryptUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/HttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ResultUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/Utils/YmlFactoryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/YmlFactoryUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/learn/demo/HttpUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learn/demo/HttpUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +67,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/xml/googleCheck.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.24096386" />
   </component>
   <component name="RecentsManager">
@@ -261,7 +220,7 @@
       <workItem from="1568516916886" duration="9708000" />
       <workItem from="1568543337106" duration="6422000" />
       <workItem from="1568594635689" duration="95504000" />
-      <workItem from="1568943480987" duration="13847000" />
+      <workItem from="1568943480987" duration="20200000" />
     </task>
     <task id="LOCAL-00001" summary="单元测试">
       <created>1568549331484</created>
@@ -459,7 +418,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568958518884</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="google checkstyle">
+      <created>1568963947210</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1568963947210</updated>
+    </task>
+    <task id="LOCAL-00030" summary="jsonUtil toBean toJson">
+      <created>1568970156622</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1568970156622</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,8 +452,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="handle exception" />
-    <MESSAGE value="custom exception" />
     <MESSAGE value="request/response logger" />
     <MESSAGE value="database" />
     <MESSAGE value="controller" />
@@ -504,7 +475,9 @@
     <MESSAGE value="httpUtils" />
     <MESSAGE value="GoogleStyle&#10;SimpleCheckStyle" />
     <MESSAGE value="google checkstyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="google checkstyle" />
+    <MESSAGE value="jsonUtil toBean toJson" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -535,9 +508,14 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/shiro/ShiroConfig.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java</url>
           <line>47</line>
-          <option name="timeStamp" value="38" />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
