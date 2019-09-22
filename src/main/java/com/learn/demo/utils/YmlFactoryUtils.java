@@ -8,6 +8,7 @@ import org.springframework.core.env.CompositePropertySource;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.support.DefaultPropertySourceFactory;
 import org.springframework.core.io.support.EncodedResource;
+import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 /*
@@ -15,6 +16,7 @@ import org.springframework.util.CollectionUtils;
  * @date 2019/9/17 13:40
  * @description
  */
+@Component
 public class YmlFactoryUtils extends DefaultPropertySourceFactory {
 
   @Override

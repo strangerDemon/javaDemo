@@ -16,17 +16,17 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  */
 @Component
-public class JsonUtil {
+public class JsonUtils {
 
-  private static final Logger logger = LoggerFactory.getLogger(JsonUtil.class);
+  private static final Logger logger = LoggerFactory.getLogger(JsonUtils.class);
   @Resource
   private ObjectMapper objectMapper;
 
-  private static JsonUtil jsonUtil;
+  private static JsonUtils jsonUtils;
 
   @PostConstruct
   public void init() {
-    jsonUtil = this;
+    jsonUtils = this;
   }
 
   /**
@@ -38,7 +38,7 @@ public class JsonUtil {
    */
   public static <T> T toBean(String json, Class<T> bean) {
     try {
-      return jsonUtil.objectMapper.readValue(json, bean);
+      return jsonUtils.objectMapper.readValue(json, bean);
     } catch (Exception ex) {
       logger.error("toBean: error = {}", ex.getMessage());
       return null;
@@ -53,7 +53,7 @@ public class JsonUtil {
    */
   public static String toJson(Object object) {
     try {
-      return jsonUtil.objectMapper.writeValueAsString(object);
+      return jsonUtils.objectMapper.writeValueAsString(object);
     } catch (Exception ex) {
       logger.error("toJson: error = {}", ex.getMessage());
       return "";
@@ -70,7 +70,7 @@ public class JsonUtil {
    */
   public static <T> List<T> toBeanList(String json, TypeReference<List<T>> typeReference) {
     try {
-      return jsonUtil.objectMapper.readValue(json, typeReference);
+      return jsonUtils.objectMapper.readValue(json, typeReference);
     } catch (Exception ex) {
       logger.error("toBean: error = {}", ex.getMessage());
       return null;

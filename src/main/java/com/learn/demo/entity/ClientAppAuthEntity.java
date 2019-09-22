@@ -26,29 +26,4 @@ public class ClientAppAuthEntity {
   private String userId;
 
   private String clientAppId;
-
-  public String getAuthId() {
-    return authId;
-  }
-
-  public void setAuthId(String authId) {
-    this.authId = authId;
-  }
-
-  public String getUserId() {
-    return userId;
-  }
-
-  public void setUserId(String userId) {
-    this.userId = userId;
-  }
-
-  public String getClientAppId() {
-    return clientAppId;
-  }
-
-  public void setClientAppId(String clientAppId) {
-    this.clientAppId = clientAppId;
-  }
-
 }

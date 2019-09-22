@@ -2,7 +2,9 @@ package com.learn.demo.utils;
 
 import com.learn.demo.enums.ResultEnum;
 import com.learn.demo.model.ResultModel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ResultUtils {
 
   public static ResultModel isOK() {
