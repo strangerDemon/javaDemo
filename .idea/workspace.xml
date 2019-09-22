@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/_readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/_readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +45,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -63,17 +75,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/xml/googleCheck.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.24096386" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\db" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -170,7 +182,7 @@
       </method>
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="Spring-Boot-Demo" />
+      <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.demo.DemoApplication" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -217,6 +229,11 @@
       <workItem from="1568543337106" duration="6422000" />
       <workItem from="1568594635689" duration="95504000" />
       <workItem from="1568943480987" duration="21607000" />
+      <workItem from="1568981423278" duration="810000" />
+      <workItem from="1568984116458" duration="804000" />
+      <workItem from="1569119665957" duration="6222000" />
+      <workItem from="1569140542283" duration="3686000" />
+      <workItem from="1569148638638" duration="5081000" />
     </task>
     <task id="LOCAL-00001" summary="单元测试">
       <created>1568549331484</created>
@@ -435,7 +452,28 @@
       <option name="project" value="LOCAL" />
       <updated>1568970271942</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="front build">
+      <created>1569140117387</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1569140117387</updated>
+    </task>
+    <task id="LOCAL-00033" summary="cas logic">
+      <created>1569158959224</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1569158959225</updated>
+    </task>
+    <task id="LOCAL-00034" summary="lombok&#10;repair">
+      <created>1569159079415</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1569159079415</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,9 +493,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="request/response logger" />
-    <MESSAGE value="database" />
-    <MESSAGE value="controller" />
     <MESSAGE value="entity" />
     <MESSAGE value="repository" />
     <MESSAGE value="service" />
@@ -480,14 +515,17 @@
     <MESSAGE value="google checkstyle" />
     <MESSAGE value="jsonUtil toBean toJson" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="front build" />
+    <MESSAGE value="cas logic" />
+    <MESSAGE value="lombok&#10;repair" />
+    <option name="LAST_COMMIT_MESSAGE" value="lombok&#10;repair" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java</url>
-          <line>30</line>
+          <line>28</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -516,8 +554,8 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java</url>
-          <line>47</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java</url>
+          <line>60</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>

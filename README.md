@@ -20,7 +20,12 @@
     
     axios
     
+## 编辑器
     
+    前端 VS Code
+    
+    后端 IDEA
+     
 ## 目录结构
 
     Aspect aop处理请求
