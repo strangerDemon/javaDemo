@@ -4,12 +4,10 @@ import com.learn.demo.entity.UserEntity;
 import com.learn.demo.model.MyExceptionModel;
 import com.learn.demo.repository.UserRepository;
 import com.learn.demo.utils.EncryptUtils;
-import com.learn.demo.utils.JsonUtil;
 import com.learn.demo.utils.RedisUtils;
 import java.util.List;
 import java.util.UUID;
 import javax.annotation.Resource;
-import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -39,16 +37,12 @@ public class UserService {
   }
 
   /**
-   * 登录.
+   * 用户登录.
    *
-   * @param entity 用户登录信息
+   * @param entity 登录账号
    * @return 用户信息
    */
-  public UserEntity checkLogin(String sessionId, UserEntity entity) {
-    UserEntity t = JsonUtil.toBean(redisUtils.get(sessionId), UserEntity.class);
-    if (t != null) {
-      throw new MyExceptionModel("账号已登录!");
-    }
+  public UserEntity userLogin(UserEntity entity) {
     String encryptPS = EncryptUtils.encrypt(entity.getPassword());
     UserEntity user = userRepository.getByAccount(entity.getAccount());
     if (user == null) {
@@ -57,7 +51,6 @@ public class UserService {
     if (!encryptPS.equals(user.getPassword())) {
       throw new MyExceptionModel("密码不正确!");
     }
-    redisUtils.defaultSet(sessionId, JsonUtil.toJson(user));
     return user;
   }
 

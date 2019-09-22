@@ -1,10 +1,15 @@
 package com.learn.demo.controller;
 
+import com.learn.demo.entity.CasLogEntity;
 import com.learn.demo.entity.UserEntity;
+import com.learn.demo.model.RedisUserModel;
 import com.learn.demo.model.ResultModel;
+import com.learn.demo.service.CasLogService;
 import com.learn.demo.service.UserService;
+import com.learn.demo.utils.JsonUtils;
 import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import java.util.Date;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,6 +31,8 @@ public class UserController {
   @Resource
   private UserService userService;
   @Resource
+  private CasLogService casLogService;
+  @Resource
   private RedisUtils redisUtils;
 
   @RequestMapping("/GetAllUser")
@@ -43,8 +50,31 @@ public class UserController {
     return ResultUtils.isOK(userService.addUser(entity));
   }
 
+  /**
+   * 用户登录接口.
+   *
+   * @param entity 登录信息
+   * @return 用户信息
+   */
   @RequestMapping("/UserLogin")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
-    return ResultUtils.isOK(userService.checkLogin(session.getId(),entity));
+    RedisUserModel redisUser = JsonUtils
+        .toBean(redisUtils.get(session.getId()), RedisUserModel.class);
+    if (redisUser == null) {
+      UserEntity user = userService.userLogin(entity);
+      redisUser = new RedisUserModel();
+      redisUser.setAccount(user.getAccount());
+      redisUser.setUserId(user.getUserId());
+      redisUser.setUserName(user.getRealName());
+      redisUser.setPassword(user.getPassword());
+      redisUser.setLogTime(new Date());
+      //casLog日志
+      CasLogEntity casLog = casLogService.createCasLog(session.getId(), user);
+      if (casLog != null) {
+        redisUser.setCasLogId(casLog.getCasLogId());
+      }
+      redisUtils.set(session.getId(),JsonUtils.toJson(redisUser));
+    }
+    return ResultUtils.isOK(redisUser);
   }
 }
