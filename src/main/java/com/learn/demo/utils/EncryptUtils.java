@@ -8,19 +8,18 @@ import javax.annotation.Resource;
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-/*
+/**
+ * 加解密.
  * @author demo
  * @date 2019/9/17 15:01
- * @description 加解密
+ * @version 1.0.0
  */
+@Slf4j
 @Component
 public class EncryptUtils {
-
-  private static final Logger logger = LoggerFactory.getLogger(EncryptUtils.class);
 
   @Resource
   private SystemConfigModel systemConfig;
@@ -71,7 +70,7 @@ public class EncryptUtils {
       return Base64.getEncoder().encodeToString(encrypted);
 
     } catch (Exception e) {
-      logger.error("encrypt exception={}", e.toString());
+      log.error("encrypt:{}", e.toString());
       throw new MyExceptionModel(e.getMessage());
     }
   }
@@ -107,7 +106,7 @@ public class EncryptUtils {
       byte[] original = cipher.doFinal(encrypted1);
       return new String(original);
     } catch (Exception e) {
-      logger.error("encrypt exception={}", e.toString());
+      log.error("encrypt:{}", e.toString());
       throw new MyExceptionModel(e.getMessage());
     }
   }

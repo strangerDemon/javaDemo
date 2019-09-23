@@ -4,18 +4,20 @@ import com.learn.demo.global.GlobalConfig;
 import java.util.UUID;
 import org.springframework.stereotype.Component;
 
-/*
+/**
+ * 单点登录工具类.
+ *
  * @author demo
+ * @version 1.0.0
  * @date 2019/9/19 9:11
- * @description 单点登录工具类
  */
 @Component
 public class CasUtils {
 
-  //region ticket
 
   /**
    * 创建票据.
+   *
    * @return 票据
    */
   public String createTicket() {
@@ -31,5 +33,6 @@ public class CasUtils {
   private void redisAddClient() {
 
   }
-  //endregion
+
+
 }

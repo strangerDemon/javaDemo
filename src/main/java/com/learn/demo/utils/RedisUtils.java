@@ -9,10 +9,11 @@ import javax.annotation.Resource;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
-/*
+/**
+ * redis.
  * @author demo
  * @date 2019/9/16 9:41
- * @description redis
+ * @version 1.0.0
  */
 @Component
 public class RedisUtils {

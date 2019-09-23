@@ -16,28 +16,22 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 @PropertySource(value = {
-    "classpath:filter.yml"}, factory = YmlFactoryUtils.class, encoding = "utf-8")
+    "classpath:shiroConfig.yml"}, factory = YmlFactoryUtils.class, encoding = "utf-8")
 @ConfigurationProperties(prefix = "filter")
-public class FilterModel {
+public class ShiroConfigModel {
 
+  //是否设置url
+  private boolean isSetUrl;
+  //登录地址
+  private String loginUrl;
+  //成功地址
+  private String successUrl;
+  //无权限地址
+  private String noAuthorityUrl;
+
+  //不过滤路径列表
   private List<String> unFilterList;
-
+  //过滤列表
   private List<String> filterList;
-
-  public List<String> getUnFilterList() {
-    return unFilterList;
-  }
-
-  public void setUnFilterList(List<String> unFilterList) {
-    this.unFilterList = unFilterList;
-  }
-
-  public List<String> getFilterList() {
-    return filterList;
-  }
-
-  public void setFilterList(List<String> filterList) {
-    this.filterList = filterList;
-  }
 
 }

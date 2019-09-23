@@ -1,14 +1,13 @@
 package com.learn.demo.aspect;
 
 import javax.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -22,10 +21,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  */
 
 @Aspect
+@Slf4j
 @Component
 public class HttpAspect {
-
-  private static final Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
   @Pointcut("execution(public * com.learn.demo.controller.*.*(..))")
   public void log() {
@@ -39,23 +37,23 @@ public class HttpAspect {
    */
   @Before("log()")
   public void aspectBefore(JoinPoint joinPoint) {
-    logger.info("aspectBefore");
+    log.info("aspectBefore");
 
     ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder
         .getRequestAttributes();
     assert attributes != null;
     HttpServletRequest request = attributes.getRequest();
     //url
-    logger.info("url={}", request.getRequestURL());
+    log.info("url={}", request.getRequestURL());
     //method
-    logger.info("method={}", request.getMethod());
+    log.info("method={}", request.getMethod());
     //ip
-    logger.info("ip={}", request.getRemoteAddr());
+    log.info("ip={}", request.getRemoteAddr());
     //类
-    logger.info("class={}",
+    log.info("class={}",
         joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
     //类
-    logger.info("args={}", joinPoint.getArgs());
+    log.info("args={}", joinPoint.getArgs());
   }
 
   /**
@@ -65,7 +63,7 @@ public class HttpAspect {
    */
   @After("log()")
   public void aspectAfter(final JoinPoint joinPoint) {
-    logger.info("aspectAfter");
+    log.info("aspectAfter");
   }
 
   /*
@@ -75,6 +73,6 @@ public class HttpAspect {
    */
   @AfterReturning(returning = "object", pointcut = "log()")
   public void aspectReturn(Object object) {
-    logger.info("response={}", object.toString());
+    log.info("response={}", object.toString());
   }
 }

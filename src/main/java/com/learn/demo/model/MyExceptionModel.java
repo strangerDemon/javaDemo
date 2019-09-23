@@ -1,12 +1,16 @@
 package com.learn.demo.model;
 
 import com.learn.demo.enums.ResultEnum;
+import lombok.Getter;
+import lombok.Setter;
 
 /*
  * 自定义异常
  */
 public class MyExceptionModel extends RuntimeException {
 
+  @Getter
+  @Setter
   private Integer code;
 
   public MyExceptionModel(String msg) {
@@ -22,13 +26,5 @@ public class MyExceptionModel extends RuntimeException {
   public MyExceptionModel(ResultEnum result) {
     super(result.getMsg());
     this.code = result.getCode();
-  }
-
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
   }
 }

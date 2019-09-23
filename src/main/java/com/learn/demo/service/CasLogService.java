@@ -7,9 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import javax.annotation.Resource;
-import org.slf4j.ILoggerFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /*
@@ -17,33 +15,18 @@ import org.springframework.stereotype.Service;
  * @date 2019/9/16 14:23
  * @description
  */
+@Slf4j
 @Service
 public class CasLogService {
 
-  private static final Logger logger = LoggerFactory.getLogger(CasLogService.class);
   @Resource
   private CasLogRepository casLogRepository;
 
-  public CasLogEntity getOne(String s) {
-    return casLogRepository.getOne(s);
-  }
-
-  public void delete(CasLogEntity casLogEntity) {
-    casLogRepository.delete(casLogEntity);
-  }
-
-  public List<CasLogEntity> findAll() {
-    return casLogRepository.findAll();
-  }
-
-  public <S extends CasLogEntity> S saveAndFlush(S s) {
-    return casLogRepository.saveAndFlush(s);
-  }
-
   /**
    * 创建登录日志.
+   *
    * @param sessionId 回话id
-   * @param user 用户信息
+   * @param user      用户信息
    * @return 日志对象
    */
   public CasLogEntity createCasLog(String sessionId, UserEntity user) {
@@ -63,7 +46,7 @@ public class CasLogService {
       casLogRepository.save(casLogEntity);
       return casLogEntity;
     } catch (Exception ex) {
-      logger.error("createCasLog error={}", ex.getMessage());
+      log.error("createCasLog:{}", ex.getMessage());
       return null;
     }
   }

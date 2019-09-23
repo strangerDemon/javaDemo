@@ -11,10 +11,11 @@ import org.springframework.core.io.support.EncodedResource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-/*
+/**
+ * yml文件读取工具.
  * @author demo
  * @date 2019/9/17 13:40
- * @description
+ * @version 1.0.0
  */
 @Component
 public class YmlFactoryUtils extends DefaultPropertySourceFactory {

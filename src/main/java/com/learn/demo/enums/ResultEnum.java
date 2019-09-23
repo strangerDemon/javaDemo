@@ -1,5 +1,8 @@
 package com.learn.demo.enums;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /*
  * @author demo
  * @version 1.0.0
@@ -10,8 +13,12 @@ public enum ResultEnum {
   ERROR(0, "失败"),
   SUCCESS(1, "成功");
 
+  @Getter
+  @Setter
   private Integer code;
 
+  @Getter
+  @Setter
   private String msg;
 
   ResultEnum(Integer code, String msg) {
@@ -19,19 +26,4 @@ public enum ResultEnum {
     this.msg = msg;
   }
 
-  public Integer getCode() {
-    return code;
-  }
-
-  public void setCode(Integer code) {
-    this.code = code;
-  }
-
-  public String getMsg() {
-    return msg;
-  }
-
-  public void setMsg(String msg) {
-    this.msg = msg;
-  }
 }

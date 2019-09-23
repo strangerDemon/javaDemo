@@ -2,8 +2,7 @@ package com.learn.demo.handler;
 
 import com.learn.demo.model.ResultModel;
 import com.learn.demo.utils.ResultUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,15 +16,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @description controller的接口异常处理
  * @version 1.0.0
  */
+@Slf4j
 @ControllerAdvice
 public class ExceptionHandle {
-
-  private static final Logger logger = LoggerFactory.getLogger(ExceptionHandle.class);
 
   @ExceptionHandler(value = Exception.class)
   @ResponseBody
   public ResultModel handle(Exception ex) {
-    logger.error("exception={}", ex.toString());
+    log.error("handle exception:{}", ex.toString());
     return ResultUtils.isError(ex.getMessage());
   }
 

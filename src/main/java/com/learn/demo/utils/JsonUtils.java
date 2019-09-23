@@ -5,20 +5,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-/*
+/**
+ * 对象json转换.
  * @author demo
  * @date 2019/9/20 16:16
- * @description
  * @version 1.0.0
  */
+@Slf4j
 @Component
 public class JsonUtils {
 
-  private static final Logger logger = LoggerFactory.getLogger(JsonUtils.class);
   @Resource
   private ObjectMapper objectMapper;
 
@@ -40,7 +39,7 @@ public class JsonUtils {
     try {
       return jsonUtils.objectMapper.readValue(json, bean);
     } catch (Exception ex) {
-      logger.error("toBean: error = {}", ex.getMessage());
+      log.error("toBean:{}", ex.getMessage());
       return null;
     }
   }
@@ -55,7 +54,7 @@ public class JsonUtils {
     try {
       return jsonUtils.objectMapper.writeValueAsString(object);
     } catch (Exception ex) {
-      logger.error("toJson: error = {}", ex.getMessage());
+      log.error("toJson:{}", ex.getMessage());
       return "";
     }
   }
@@ -72,8 +71,20 @@ public class JsonUtils {
     try {
       return jsonUtils.objectMapper.readValue(json, typeReference);
     } catch (Exception ex) {
-      logger.error("toBean: error = {}", ex.getMessage());
+      log.error("toBean:{}", ex.getMessage());
       return null;
     }
+  }
+
+  /**
+   * 对象转其他类型.
+   *
+   * @param object 对象
+   * @param <T>    类型
+   * @return 类型数据
+   */
+  @SuppressWarnings("unchecked")
+  public static <T> T cast(Object object) {
+    return (T) object;
   }
 }

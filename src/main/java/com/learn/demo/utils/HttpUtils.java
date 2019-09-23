@@ -4,10 +4,11 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-/*
+/**
+ * http请求工具类.
  * @author demo
  * @date 2019/9/19 9:11
- * @description http请求工具类
+ * @version 1.0.0
  */
 @Component
 public class HttpUtils {

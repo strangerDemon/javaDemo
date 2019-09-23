@@ -25,21 +25,4 @@ public class SystemConfigModel {
   private Integer redisTimeOut;
 
   private String encryptKey;
-
-  public Integer getRedisTimeOut() {
-    return redisTimeOut;
-  }
-
-  public void setRedisTimeOut(Integer redisTimeOut) {
-    this.redisTimeOut = redisTimeOut;
-  }
-
-  public String getEncryptKey() {
-    return encryptKey;
-  }
-
-  public void setEncryptKey(String encryptKey) {
-    this.encryptKey = encryptKey;
-  }
-
 }
