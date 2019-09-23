@@ -15,4 +15,8 @@ filter:
     - "/**/*.woff"
     - "/User/UserLogin"
   filterList: #过滤路径
-    - "/**" # /** 匹配本路径且包含子路径, /*匹配本路径
+    - "/**" # /** 匹配本路径且包含子路径, /*
+  isSetUrl: false # 是否设置下面3个参数
+  loginUrl: "" #登录地址 需配到unFilterList
+  successUrl: "" #成功地址 -
+  noAuthorityUrl: "" #无权限地址 -

@@ -16,10 +16,6 @@ public class UserService {
   @Resource
   private UserRepository userRepository;
 
-  @Resource
-  private RedisUtils redisUtils;
-
-
   public UserEntity getOne(String s) {
     return userRepository.getOne(s);
   }
