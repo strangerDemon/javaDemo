@@ -9,9 +9,12 @@ import com.learn.demo.service.UserService;
 import com.learn.demo.utils.JsonUtils;
 import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import com.learn.demo.utils.shiro.ShiroUtils;
 import java.util.Date;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,6 +37,8 @@ public class UserController {
   private CasLogService casLogService;
   @Resource
   private RedisUtils redisUtils;
+  @Resource
+  private ShiroUtils shiroUtils;
 
   @RequestMapping("/GetAllUser")
   public ResultModel getAllUser() {
@@ -58,9 +63,9 @@ public class UserController {
    */
   @RequestMapping("/UserLogin")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
-    RedisUserModel redisUser = JsonUtils
-        .toBean(redisUtils.get(session.getId()), RedisUserModel.class);
-    if (redisUser == null) {
+    String userJson = redisUtils.get(session.getId());
+    RedisUserModel redisUser;
+    if (userJson == null || userJson.equals("")) {
       UserEntity user = userService.userLogin(entity);
       redisUser = new RedisUserModel();
       redisUser.setAccount(user.getAccount());
@@ -73,7 +78,10 @@ public class UserController {
       if (casLog != null) {
         redisUser.setCasLogId(casLog.getCasLogId());
       }
-      redisUtils.set(session.getId(),JsonUtils.toJson(redisUser));
+      redisUtils.set(session.getId(), JsonUtils.toJson(redisUser));//存redis
+      shiroUtils.login(user);//存shiro
+    } else {
+      redisUser = JsonUtils.toBean(userJson, RedisUserModel.class);
     }
     return ResultUtils.isOK(redisUser);
   }

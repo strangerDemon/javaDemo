@@ -8,5 +8,9 @@ package com.learn.demo.global;
  */
 public class GlobalConfig {
 
-  public static String TicketHead = "ST_"; //票据头
+  public static final String TicketHead = "ST_"; //票据头
+
+  public static final String ShiroUser = "Shiro_User";//shiro 用户对象信息
+
+  public static final String ShiroAccount = "Shiro_Account";//shiro账号
 }
