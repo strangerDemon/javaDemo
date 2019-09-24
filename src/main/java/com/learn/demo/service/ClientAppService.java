@@ -30,11 +30,12 @@ public class ClientAppService {
 
   /**
    * 获取权限内的客户端.
+   *
    * @param userId 用户id
    * @return 客户端列表
    */
   public List<ClientAppEntity> findAuthClients(String userId) {
-    return clientAppRepository.findAuthClients(userId);
+    return clientAppRepository.findAll();//.findAuthClients(userId);
   }
 
   public List<ClientAppEntity> findAll() {

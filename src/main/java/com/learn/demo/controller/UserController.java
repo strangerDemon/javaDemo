@@ -11,10 +11,10 @@ import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
 import com.learn.demo.utils.shiro.ShiroUtils;
 import java.util.Date;
+import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.crypto.hash.SimpleHash;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,6 +43,11 @@ public class UserController {
   @RequestMapping("/GetAllUser")
   public ResultModel getAllUser() {
     return ResultUtils.isOK(userService.findAll());
+  }
+
+  @RequestMapping("GetUserPage")
+  public ResultModel getUserPage(@RequestBody Map data,Pageable page) {
+    return ResultUtils.isOK(userService.findAll(page));
   }
 
   @RequestMapping("/GetUser")

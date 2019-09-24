@@ -2,17 +2,12 @@ package com.learn.demo.service;
 
 import com.learn.demo.entity.CasLogEntity;
 import com.learn.demo.entity.UserEntity;
-import com.learn.demo.model.PageModel;
 import com.learn.demo.repository.CasLogRepository;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /*
@@ -39,22 +34,12 @@ public class CasLogService {
 
   /**
    * 查询所有.
+   *
    * @return 所有cas登录日志
    */
   public List<CasLogEntity> findAll() {
     return casLogRepository.findAll();
   }
-
-  /**
-   * 分页查询.
-   * @param page 分页参数
-   * @return 列表
-   */
-  public List<CasLogEntity> findPage(PageModel page) {
-
-    return casLogRepository.findPage(page);
-  }
-
 
   /**
    * 创建登录日志.

@@ -19,7 +19,6 @@ public interface ClientAppRepository extends JpaRepository<ClientAppEntity, Stri
 
   ClientAppEntity getByAppLoginUrl(String loginUrl);
 
-  @Query(value = "select ClientAppEntity from ClientApp c where c.appId in "
-      + "( select auth.clientAppId from ClientAppAuth auth where auth.userId =:userId)")
-  List<ClientAppEntity> findAuthClients(@Param("userId") String userId);
+  //todo
+  //List<ClientAppEntity> findAuthClients(@Param("userId") String userId);
 }

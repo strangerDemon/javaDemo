@@ -8,6 +8,8 @@ import com.learn.demo.utils.RedisUtils;
 import java.util.List;
 import java.util.UUID;
 import javax.annotation.Resource;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,8 +30,18 @@ public class UserService {
     userRepository.delete(userEntity);
   }
 
+
   public List<UserEntity> findAll() {
     return userRepository.findAll();
+  }
+
+  /**
+   * 分页查询.
+   * @param pageable 分页参数
+   * @return 分页列表
+   */
+  public Page<UserEntity> findAll(Pageable pageable) {
+    return userRepository.findAll(pageable);
   }
 
   /**
