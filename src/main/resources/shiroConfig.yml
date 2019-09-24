@@ -14,6 +14,7 @@ filter:
     - "/**/*.ttf"
     - "/**/*.woff"
     - "/User/UserLogin"
+    - "/Cas/IsLogin"
   filterList: #过滤路径
     - "/**" # /** 匹配本路径且包含子路径, /*
   isSetUrl: false # 是否设置下面3个参数

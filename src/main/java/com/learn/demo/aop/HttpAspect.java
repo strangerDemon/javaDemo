@@ -1,4 +1,4 @@
-package com.learn.demo.aspect;
+package com.learn.demo.aop;
 
 import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;

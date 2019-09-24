@@ -50,7 +50,7 @@ public class CasController {
   public ResultModel isLogin() {
     String userJson = redisUtils.get(session.getId());
     if (userJson == null || userJson.equals("")) {
-      return ResultUtils.isError("未登录");
+      return ResultUtils.isOK("未登录");
     }
     RedisUserModel redisUser = JsonUtils.toBean(userJson, RedisUserModel.class);
     return ResultUtils.isOK(redisUser);
