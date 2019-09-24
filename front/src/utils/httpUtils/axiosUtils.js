@@ -15,13 +15,14 @@ import querystring from 'querystring'
 import axios from 'axios'
 import ConfigUtils from "../configUtils"
 
-axios.defaults.withCredentials=true;
+axios.defaults.withCredentials = true;
 const instance = axios.create({
-  baseURL:ConfigUtils.systemConfig.api,
+  baseURL: ConfigUtils.systemConfig.api,
   timeout: 60000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest'
-  }
+  },
+  withCredentials: true
 })
 
 
@@ -40,30 +41,28 @@ instance.interceptors.request.use(config => {
   Promise.reject(error);
 })
 
-// respone拦截器
+// response拦截器
 instance.interceptors.response.use(
   response => {
-    const code = response.data.RespCode
-    if (response.config.url.indexOf("loginByToken") > 0) {
-      return response.data
-    } else if (code === 1) {
-      if (response.data.Results==undefined) {//!response.data.Results把空数据 也返回true了
+    const result = response.data
+    if (result.status === 1) {
+      if (result.data == null) { //!response.data.Results把空数据 也返回true了
         return true
       } else {
-        return response.data.Results
+        return result.data
       }
     } else {
       MessageBox({
-          message: response.data.RespDesc,
-          type: 'warning',
-          duration: 2 * 1000
-        })
+        message: result.msg,
+        type: 'warning',
+        duration: 2 * 1000
+      })
       return false
     }
   },
   error => {
     MessageBox({
-      message: error.message,
+      message: error.msg,
       type: 'warning',
       duration: 3 * 1000
     });
