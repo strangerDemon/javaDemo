@@ -1,7 +1,7 @@
 package com.learn.demo.utils.shiro;
 
 import com.learn.demo.entity.UserEntity;
-import com.learn.demo.global.GlobalConfig;
+import com.learn.demo.utils.ConstUtils;
 import com.learn.demo.utils.JsonUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
@@ -32,7 +32,7 @@ public class Jurisdiction {
    * @return 用户账号
    */
   public static String getAccount() {
-    return getSession().getAttribute(GlobalConfig.ShiroAccount).toString();
+    return getSession().getAttribute(ConstUtils.ShiroAccount).toString();
   }
 
   /**
@@ -41,7 +41,7 @@ public class Jurisdiction {
    */
   public static UserEntity getUser() {
     return JsonUtils
-        .toBean(getSession().getAttribute(GlobalConfig.ShiroUser).toString(), UserEntity.class);
+        .toBean(getSession().getAttribute(ConstUtils.ShiroUser).toString(), UserEntity.class);
   }
 
 }

@@ -9,11 +9,12 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
+/**
+ * ClientAppAuth 用户的客户端权限表的增删改查.
+ *
  * @author demo
- * @date 2019/9/16 14:34
- * @description ClientAppAuth 用户的客户端权限表的增删改查
  * @version 1.0.0
+ * @date 2019/9/16 14:34
  */
 @RestController
 @RequestMapping("/ClientAppAuth")

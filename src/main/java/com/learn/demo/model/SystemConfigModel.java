@@ -6,10 +6,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-/*
+/**
+ * 系统配置参数.
+ *
  * @author demo
+ * @version 1.0.0
  * @date 2019/9/16 19:22
- * @description 系统配置参数
  */
 @Data
 @Component

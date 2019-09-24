@@ -4,13 +4,14 @@ import com.learn.demo.entity.ClientAppEntity;
 import com.learn.demo.repository.ClientAppRepository;
 import java.util.List;
 import javax.annotation.Resource;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
-/*
+/**
+ * .
+ *
  * @author demo
+ * @version 1.0.0
  * @date 2019/9/16 14:24
- * @description
  */
 @Service
 public class ClientAppService {

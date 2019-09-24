@@ -9,11 +9,12 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
+/**
+ * ClientApp 客户端表的增删改查.
+ *
  * @author demo
  * @version 1.0.0
  * @date 2019/9/16 14:33
- * @description ClientApp 客户端表的增删改查
  */
 @RestController
 @RequestMapping("/ClientApp")

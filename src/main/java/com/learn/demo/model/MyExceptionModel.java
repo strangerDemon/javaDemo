@@ -4,8 +4,12 @@ import com.learn.demo.enums.ResultEnum;
 import lombok.Getter;
 import lombok.Setter;
 
-/*
- * 自定义异常
+/**
+ * 自定义异常.
+ *
+ * @author demo
+ * @version 1.0.0
+ * @date
  */
 public class MyExceptionModel extends RuntimeException {
 

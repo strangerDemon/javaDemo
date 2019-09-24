@@ -13,9 +13,10 @@ import org.springframework.stereotype.Component;
 
 /**
  * 加解密.
+ *
  * @author demo
- * @date 2019/9/17 15:01
  * @version 1.0.0
+ * @date 2019/9/17 15:01
  */
 @Slf4j
 @Component

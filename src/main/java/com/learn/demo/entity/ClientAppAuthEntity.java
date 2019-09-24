@@ -7,11 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
 
-/*
+/**
+ * 客户端权限.
+ *
  * @author demo
  * @version 1.0.0
  * @date 2019/9/16 10:28
- * @description 客户端权限
  */
 @Data
 @Entity

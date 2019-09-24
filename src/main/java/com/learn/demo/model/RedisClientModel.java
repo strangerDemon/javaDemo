@@ -3,11 +3,12 @@ package com.learn.demo.model;
 import java.util.Date;
 import lombok.Data;
 
-/*
+/**
+ * redis 缓存的客户端（接入系统）对象信息.
+ *
  * @author demo
- * @date 2019/9/22 18:18
- * @description redis 缓存的客户端（接入系统）对象信息
  * @version 1.0.0
+ * @date 2019/9/22 18:18
  */
 @Data
 public class RedisClientModel {

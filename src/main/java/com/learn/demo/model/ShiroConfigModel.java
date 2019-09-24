@@ -7,11 +7,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-/*
+/**
+ * shiro.yml 对象.
+ *
  * @author demo
  * @version 1.0.0
  * @date 2019/9/19 13:55
- * @description
  */
 @Data
 @Component

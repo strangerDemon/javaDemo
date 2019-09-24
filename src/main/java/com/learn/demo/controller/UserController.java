@@ -19,11 +19,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
+/**
+ * BaseUser 用户表的增删改查.
+ *
  * @author demo
  * @version 1.0.0
  * @date 2019/9/10 16:40
- * @description BaseUser 用户表的增删改查
  */
 @RestController
 @RequestMapping("/User")
@@ -46,7 +47,7 @@ public class UserController {
   }
 
   @RequestMapping("GetUserPage")
-  public ResultModel getUserPage(@RequestBody Map data,Pageable page) {
+  public ResultModel getUserPage(@RequestBody Map data, Pageable page) {
     return ResultUtils.isOK(userService.findAll(page));
   }
 

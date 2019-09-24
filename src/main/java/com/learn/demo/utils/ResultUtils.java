@@ -6,9 +6,10 @@ import org.springframework.stereotype.Component;
 
 /**
  * 接口返回工具类.
+ *
  * @author demo
- * @date
  * @version 1.0.0
+ * @date
  */
 @Component
 public class ResultUtils {

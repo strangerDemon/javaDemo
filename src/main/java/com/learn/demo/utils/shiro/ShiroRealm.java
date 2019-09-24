@@ -22,9 +22,10 @@ import org.springframework.stereotype.Component;
 
 /**
  * shiro 权限校验.
+ *
  * @author demo
- * @date 2019/9/19 10:19
  * @version 1.0.0
+ * @date 2019/9/19 10:19
  */
 @Slf4j
 @Component

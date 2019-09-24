@@ -13,9 +13,10 @@ import org.springframework.util.CollectionUtils;
 
 /**
  * yml文件读取工具.
+ *
  * @author demo
- * @date 2019/9/17 13:40
  * @version 1.0.0
+ * @date 2019/9/17 13:40
  */
 @Component
 public class YmlFactoryUtils extends DefaultPropertySourceFactory {

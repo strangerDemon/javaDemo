@@ -7,10 +7,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
-/*
+/**
+ * BaseUser jpa.
+ *
  * @author demo
+ * @version 1.0.0
  * @date 2019/9/12 17:14
- * @description BaseUser jpa
  */
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, String> {

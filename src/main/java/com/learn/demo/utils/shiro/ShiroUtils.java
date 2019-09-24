@@ -1,7 +1,7 @@
 package com.learn.demo.utils.shiro;
 
 import com.learn.demo.entity.UserEntity;
-import com.learn.demo.global.GlobalConfig;
+import com.learn.demo.utils.ConstUtils;
 import com.learn.demo.model.MyExceptionModel;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
@@ -36,10 +36,10 @@ public class ShiroUtils {
     }
     if (subject.isAuthenticated()) {              //验证是否登录成功
       Session session = Jurisdiction.getSession();
-      session.removeAttribute(GlobalConfig.ShiroAccount);
-      session.removeAttribute(GlobalConfig.ShiroUser);
-      session.setAttribute(GlobalConfig.ShiroUser, user);
-      session.setAttribute(GlobalConfig.ShiroAccount, user.getAccount());
+      session.removeAttribute(ConstUtils.ShiroAccount);
+      session.removeAttribute(ConstUtils.ShiroUser);
+      session.setAttribute(ConstUtils.ShiroUser, user);
+      session.setAttribute(ConstUtils.ShiroAccount, user.getAccount());
     } else {
       token.clear();
       throw new MyExceptionModel("尝试登录系统失败,无权限");

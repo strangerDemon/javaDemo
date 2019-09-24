@@ -1,6 +1,5 @@
 package com.learn.demo.utils;
 
-import com.learn.demo.global.GlobalConfig;
 import java.util.UUID;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +20,7 @@ public class CasUtils {
    * @return 票据
    */
   public String createTicket() {
-    return GlobalConfig.TicketHead + UUID.randomUUID();
+    return ConstUtils.TicketHead + UUID.randomUUID();
   }
 
   public boolean verifyTicket() {

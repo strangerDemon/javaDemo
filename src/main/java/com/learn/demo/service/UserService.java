@@ -4,7 +4,6 @@ import com.learn.demo.entity.UserEntity;
 import com.learn.demo.model.MyExceptionModel;
 import com.learn.demo.repository.UserRepository;
 import com.learn.demo.utils.EncryptUtils;
-import com.learn.demo.utils.RedisUtils;
 import java.util.List;
 import java.util.UUID;
 import javax.annotation.Resource;
@@ -12,6 +11,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+/**
+ * .
+ *
+ * @author demo
+ * @version 1.0.0
+ * @date
+ */
 @Service
 public class UserService {
 
@@ -37,6 +43,7 @@ public class UserService {
 
   /**
    * 分页查询.
+   *
    * @param pageable 分页参数
    * @return 分页列表
    */

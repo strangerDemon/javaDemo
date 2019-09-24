@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.List;
 import lombok.Data;
 
-/*
+/**
+ * cas登录redis缓存的用户信息.
  * @author demo
- * @date 2019/9/22 18:05
- * @description cas登录redis缓存的用户信息
  * @version 1.0.0
+ * @date 2019/9/22 18:05
  */
 @Data
 public class RedisUserModel {

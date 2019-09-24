@@ -10,9 +10,10 @@ import org.springframework.stereotype.Component;
 
 /**
  * 对象json转换.
+ *
  * @author demo
- * @date 2019/9/20 16:16
  * @version 1.0.0
+ * @date 2019/9/20 16:16
  */
 @Slf4j
 @Component

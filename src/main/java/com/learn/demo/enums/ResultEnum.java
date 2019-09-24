@@ -3,10 +3,12 @@ package com.learn.demo.enums;
 import lombok.Getter;
 import lombok.Setter;
 
-/*
+/**
+ * 返回枚举，统一维护返回类型.
+ *
  * @author demo
  * @version 1.0.0
- * @description 返回枚举，统一维护返回类型
+ * @date
  */
 public enum ResultEnum {
   UNKNOWN(-1, "未知"),

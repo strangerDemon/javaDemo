@@ -1,12 +1,16 @@
-package com.learn.demo.global;
+package com.learn.demo.utils;
 
-/*
+import org.springframework.stereotype.Component;
+
+/**
+ * 全局常量类.
+ *
  * @author demo
- * @date 2019/9/19 9:15
- * @description 全局静态变量
  * @version 1.0.0
+ * @date 2019/9/19 9:15
  */
-public class GlobalConfig {
+@Component
+public class ConstUtils {
 
   public static final String TicketHead = "ST_"; //票据头
 

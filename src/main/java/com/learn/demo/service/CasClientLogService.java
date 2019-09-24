@@ -6,10 +6,12 @@ import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
-/*
+/**
+ * .
+ *
  * @author demo
+ * @version 1.0.0
  * @date 2019/9/16 14:24
- * @description
  */
 @Service
 public class CasClientLogService {

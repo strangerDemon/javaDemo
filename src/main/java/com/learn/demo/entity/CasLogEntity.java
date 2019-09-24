@@ -8,11 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
 
-/*
+/**
+ * cas日志.
+ *
  * @author demo
- * @date 2019/9/16 10:28
- * @description cas日志
  * @version 1.0.0
+ * @date 2019/9/16 10:28
  */
 @Data
 @Entity

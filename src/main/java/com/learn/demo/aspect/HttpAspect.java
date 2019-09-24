@@ -13,11 +13,12 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 
-/*
+/**
+ * aop 截取所有调用接口.
+ *
  * @author demo
  * @version 1.0.0
  * @date 2019/9/15 19:34
- * @description aop 截取所有调用接口
  */
 
 @Aspect

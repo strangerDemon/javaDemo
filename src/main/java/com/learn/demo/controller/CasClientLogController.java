@@ -9,11 +9,12 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
+/**
+ * 对应CasClientLog 客户端登录日志表 的增删改查.
+ *
  * @author demo
- * @date 2019/9/16 14:35
- * @description 对应CasClientLog 客户端登录日志表 的增删改查
  * @version 1.0.0
+ * @date 2019/9/16 14:35
  */
 @RestController
 @RequestMapping("/CasClientLog")

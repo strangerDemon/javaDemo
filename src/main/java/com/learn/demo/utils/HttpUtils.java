@@ -6,9 +6,10 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * http请求工具类.
+ *
  * @author demo
- * @date 2019/9/19 9:11
  * @version 1.0.0
+ * @date 2019/9/19 9:11
  */
 @Component
 public class HttpUtils {

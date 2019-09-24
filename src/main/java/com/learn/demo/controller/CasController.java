@@ -18,11 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
+/**
+ * Cas登录接口.
+ *
  * @author demo
- * @date 2019/9/19 9:37
- * @description Cas登录接口
  * @version 1.0.0
+ * @date 2019/9/19 9:37
  */
 @RestController
 @RequestMapping("/Cas")
