@@ -44,7 +44,7 @@ public class ShiroRealm extends AuthorizingRealm {
   private HttpSession session;
 
   /**
-   * 登录认证.权限的验证
+   * 登录认证.每次接口访问时，校验用户是否登录
    *
    * @param authenticationToken token
    * @return 用户信息
@@ -67,6 +67,14 @@ public class ShiroRealm extends AuthorizingRealm {
     return null;
   }
 
+  /**
+   * 权限认证: roles、permissions.
+   *  =>@RequiresRoles("***") 角色权限.
+   *  =>@RequiresPermissions("****") 账号的接口权限.
+   *
+   * @param principals principals 身份集合
+   * @return AuthorizationInfo
+   */
   @Override
   protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
     String userName = (String) super.getAvailablePrincipal(principals);

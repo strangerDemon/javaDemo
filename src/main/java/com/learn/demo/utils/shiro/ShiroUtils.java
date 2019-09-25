@@ -1,8 +1,8 @@
 package com.learn.demo.utils.shiro;
 
 import com.learn.demo.entity.UserEntity;
-import com.learn.demo.utils.ConstUtils;
 import com.learn.demo.model.MyExceptionModel;
+import com.learn.demo.utils.ConstUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
