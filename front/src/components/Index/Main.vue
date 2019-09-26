@@ -1,113 +1,80 @@
 <template>
-  <div class='second-main'>
+  <div class='index-main-view'>
     <div class="main-nav" id="particles-js">
       <div class="header-nav">
         <div class="title-div">
           <i class="el-icon-video-camera-solid"></i> {{title}}
         </div>
-        <div class="header-nav-button">
-          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <div class="my-menu" v-for="(button,index) in navButtons" :key="index">
-              <el-submenu v-if="button.children" :index="index+''">
-                <template slot="title">{{button.label}}</template>
-                <el-menu-item v-for="(subButton,subIndex) in button.children" :key="subIndex" :index="subIndex+''">{{subButton.label}}</el-menu-item>
-              </el-submenu>
-              <el-menu-item v-else :index="index+''">{{button.label}}</el-menu-item>
-            </div>
-          </el-menu>
-        </div>
-        <div class="sign" @click="signDialogVisible = true">
-          Sign In
-          <i class="el-icon-right"></i>
+        <div class="sign" @click="singOut">
+          Sign Out
+          <i class="el-icon-switch-button"></i>
         </div>
       </div>
     </div>
     <div class="waves-div">
       <svg width="100%" height="20%" version="1.1" class="wave">
-          <defs></defs>
-          <path id="feel-the-wave" d="" />
-        </svg>
+              <defs></defs>
+              <path id="feel-the-wave" d="" />
+            </svg>
     </div>
     <div class="product-display-div">
-      <div v-for="(product,index) in productInfos" :key="index" class="product" @click="productInfo =product">
-        <img class="hover-image" :src="product.image" alt="">
+      <div v-for="(client,index) in defaultClients" :key="index" class="product" @click="openClient(client)">
+        <img class="hover-image" :src="client.appIcon" alt="">
         <div class="hover-mask">
-          <h2 class="product-title">{{product.title}}</h2>
-          <p class="product-content">{{product.content}}</p>
+          <h2 class="product-title">{{client.appName}}</h2>
+          <p class="product-content">{{client.description}}</p>
         </div>
       </div>
     </div>
-    <sign-in :signDialogVisible="signDialogVisible" @signDialogVisible="signDialogVisible=arguments[0]"></sign-in>
-    <product-info :productInfo="productInfo" @clearProductInfo="productInfo = null"></product-info>
   </div>
 </template>
 
 <script>
   import * as wavifyUtlis from "@/utils/otherUtils/wavify"
   import * as particlesUtils from 'particlesjs'
-  import signIn from "./SignIn"
-  import productInfo from "./ProductInfo"
   export default {
-    name: 'second-main',
+    name: 'index-main-view',
     directives: {},
-    components: {
-      signIn,
-      productInfo
-    },
+    components: {    },
     props: {},
     data() {
       return {
-        title: "SECOND",
-        activeIndex: "1",
-        navButtons: [{
-            label: "Info",
-            value: "info",
-          },
-          {
-            label: "Download",
-            value: "download"
-          },
-          {
-            label: "Language",
-            value: "language",
-            children: [{
-                label: "简体中文",
-                value: "simple-chinese"
-              },
-              {
-                label: "English",
-                value: "english"
-              }
-            ]
-          }
-        ],
-        productInfos: [{
-            image: "/static/images/product/1.jpg",
-            title: "marketing",
-            content: "xxx",
-            date: ""
-          },
-          {
-            image: "/static/images/product/2.jpg",
-            title: "branding",
-            content: "xxx",
-            date: ""
-          },
-          {
-            image: "/static/images/product/3.jpg",
-            title: "solution",
-            content: "xxx",
-            date: ""
-          }
-        ],
-        productInfo:null,
-        signDialogVisible:false
+        title: "CAS",
+        clientApp: null
       }
     },
-    computed: {},
+    computed: {
+      allClients(){
+        return this.$store.state.clientApp.allClients;
+      },
+      defaultClients(){
+        return this.$store.state.clientApp.defaultClients;
+      }
+    },
     watch: {},
     methods: {
-      init() {
+      init(){
+        initPage();
+        initData();
+      },
+      initData(){
+
+      },
+      openClient(client){
+
+      },
+      singOut() {
+        let vm=this
+        vm.$confirm('CAS登出, 是否继续?', '登出', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          vm.$store.commit("userLogout");
+        });
+      },
+      //页面渲染
+      initPage() {
         this.initWaves();
         this.initParticles();
       },
@@ -120,7 +87,7 @@
           speed: .25
         });
       },
-      initParticles(){
+      initParticles() {
         particlesJS('particles-js', {
           "particles": {
             "number": {
@@ -238,7 +205,6 @@
           }
         })
       },
-      handleSelect() {}
     },
     brforeCreate() {},
     //app created=>map created =>mapSwitch created=> map mounted=> mapSwitch mounted=>app mounted
@@ -251,7 +217,7 @@
 </script>
 
 <style lang='postcss'>
-  .second-main {
+  .index-main-view {
     position: relative;
     width: 100%;
     height: 100%;
@@ -259,7 +225,7 @@
       width: 100%;
       height: 50%;
       min-height: 330px;
-      z-index:98;
+      z-index: 98;
       background: linear-gradient(#409EFF, #79BBFF);
       & .header-nav {
         position: absolute;
@@ -280,46 +246,6 @@
             font-size: 2.5em;
           }
         }
-        & .header-nav-button {
-          position: absolute;
-          width: 60%;
-          height: 100%;
-          left: 20%;
-          line-height: 100px;
-          & .el-menu-demo {
-            background-color: rgba(255, 255, 255, 0);
-            margin-left: 10%;
-            & .my-menu {
-              display: inline-block;
-              & .el-menu-item {
-                color: #fff;
-                font-size: 24px;
-              }
-              & .el-menu-item:hover,.el-menu-item:focus {
-                color: #fff;
-                background-color: rgba(255, 255, 255, 0);
-              }
-              & .el-submenu {
-                & .el-submenu__title {
-                  color: #fff;
-                  font-size: 24px;
-                  background-color: rgba(255, 255, 255, 0);
-                  padding: 0 25px;
-                }
-                & .el-submenu__icon-arrow {
-                  color: #fff;
-                  font-size: 24px;
-                  font-weight: 600;
-                  right: 0px;
-                  margin-top: -10px;
-                }
-              }
-            }
-          }
-          & .el-menu.el-menu--horizontal {
-            border-bottom: 0px;
-          }
-        }
         & .sign {
           position: absolute;
           width: 20%;
@@ -331,7 +257,7 @@
           cursor: pointer;
         }
         & .sign:hover {
-          font-size: 1.25em;
+          font-size: 1.05em;
         }
       }
     }
@@ -366,7 +292,7 @@
         width: 25%;
         height: 50%;
         min-width: 320px;
-        min-height:230px;
+        min-height: 230px;
         display: inline-block;
         top: 50%;
         margin: 25px;
@@ -392,29 +318,28 @@
             font-size: 24px;
             line-height: 24px;
             font-weight: 500;
-            text-align:left;
+            text-align: left;
           }
-          & .product-content{
-          }
+          & .product-content {}
         }
-        & .hover-image{
-          width:100%;
-          height:100%;
+        & .hover-image {
+          width: 100%;
+          height: 100%;
           webkit-transform: scale(1);
           transform: scale(1);
           -webkit-transition: -webkit-transform 0.3s ease-out;
           transition: transform 0.3s ease-out;
         }
       }
-      & .product:hover{
-        & .hover-mask{
+      & .product:hover {
+        & .hover-mask {
           width: calc(100% - 50px);
           height: calc(100% - 50px);
           top: 25px;
           left: 25px;
           opacity: 0.6;
         }
-        & .hover-image{
+        & .hover-image {
           webkit-transform: scale(1.4);
           transform: scale(1.4);
         }

@@ -11,7 +11,6 @@
 import {
   MessageBox
 } from 'element-ui';
-import querystring from 'querystring'
 import axios from 'axios'
 import ConfigUtils from "../configUtils"
 
@@ -31,13 +30,10 @@ instance.interceptors.request.use(config => {
   if (!config.data) {
     config.data = {}
   }
-  config.data = querystring.stringify({
-    para: JSON.stringify(config.data)
-  })
   return config
 
 }, error => {
-  console.log(error); // for debug
+  console.error(error); // for debug
   Promise.reject(error);
 })
 

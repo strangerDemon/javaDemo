@@ -1,5 +1,5 @@
 <template>
-  <div class='index-view' :style="{'background-image':backgroundImg}">
+  <div class='index-view'>
     <el-scrollbar ref="index">
       <main-view></main-view>
     </el-scrollbar>
@@ -18,9 +18,6 @@
     props: {},
     data() {
       return {
-        backgroundImg: "",
-        currentPage: 0,
-        pages: ["first", "second"]
       }
     },
     computed: {},
@@ -28,14 +25,11 @@
     methods: {
       init() {
         let vm = this
-        let random = Math.ceil(5 * Math.random());
-        vm.backgroundImg = "url(/static/images/background/" + random + ".jpg)";
       }
     },
     brforeCreate() {},
     created() {},
     mounted() {
-      // this.$store.dispatch("init");
       this.init()
     },
     beforeDestroy() {}

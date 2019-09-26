@@ -1,4 +1,5 @@
 import HttpUtils  from '../../utils/httpUtils/axiosUtils'
+import router from '@/router'
 /**
  * 变量参数
  */
@@ -22,11 +23,18 @@ const getters = {}
  */
 const mutations = {
   userLogin (state,info) {
-    HttpUtils.post('UserLogin', info).then(
+    HttpUtils.post('User/UserLogin', info).then(
       function (resp) {
-        console.log(resp)
+        state.userInfo=resp;
+        router.push("/");
       }
     );
+  },
+  userLogout(state){
+    HttpUtils.post("User/UserLogout").then(function(resp){
+      state.userInfo={};
+      router.push("Login");
+    })
   }
 }
 
