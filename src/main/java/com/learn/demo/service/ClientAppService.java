@@ -36,7 +36,7 @@ public class ClientAppService {
    * @return 客户端列表
    */
   public List<ClientAppEntity> findAuthClients(String userId) {
-    return clientAppRepository.findAll();//.findAuthClients(userId);
+    return clientAppRepository.findAll();//findAuthClients(userId);
   }
 
   public List<ClientAppEntity> findAll() {

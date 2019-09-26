@@ -27,4 +27,6 @@ public class SystemConfigModel {
   private Integer redisTimeOut;
 
   private String encryptKey;
+
+  private String casFrontUrl;
 }

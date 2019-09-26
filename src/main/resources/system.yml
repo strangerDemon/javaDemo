@@ -3,3 +3,5 @@ system:
   redisTimeOut: 1800 #过期时间单位秒s
 
   encryptKey: "123456789encrypt" #加密 16位
+
+  casFrontUrl: "http://localhost:8889" #cas 前端部署地址

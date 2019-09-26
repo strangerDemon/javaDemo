@@ -1,5 +1,7 @@
 package com.learn.demo.aop;
 
+import com.learn.demo.model.SystemConfigModel;
+import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -21,21 +23,27 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class MyCorsFilter {
 
+  @Resource
+  private SystemConfigModel systemConfigModel;
+
   /**
-   * .
+   * 过滤器.
    *
    * @return FilterRegistrationBean
    */
   @Bean
   public FilterRegistrationBean corsFilter() {
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    //cas 前端
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
-    config.addAllowedOrigin("http://localhost:8889");
-    config.addAllowedOrigin("null");
+    config.addAllowedOrigin(systemConfigModel.getCasFrontUrl());
     config.addAllowedHeader("*");
     config.addAllowedMethod("*");
+    //todo:客户端
+
+    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     source.registerCorsConfiguration("/**", config);
+
     FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
     bean.setOrder(0);
     return bean;
