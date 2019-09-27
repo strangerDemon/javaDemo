@@ -12,6 +12,8 @@
     
     Lombok
     
+    MyBatis-Plus + Jpa
+    
 ## 前端框架
     
     Vue

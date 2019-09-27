@@ -1,6 +1,7 @@
 package com.learn.demo.service;
 
 import com.learn.demo.entity.ClientAppEntity;
+import com.learn.demo.mapper.ClientAppMapper;
 import com.learn.demo.repository.ClientAppRepository;
 import java.util.List;
 import javax.annotation.Resource;
@@ -19,6 +20,9 @@ public class ClientAppService {
   @Resource
   private ClientAppRepository clientAppRepository;
 
+  @Resource
+  private ClientAppMapper clientAppMapper;
+
   /**
    * 根据服务地址获取客户端.
    *
@@ -36,7 +40,7 @@ public class ClientAppService {
    * @return 客户端列表
    */
   public List<ClientAppEntity> findAuthClients(String userId) {
-    return clientAppRepository.findAll();//findAuthClients(userId);
+    return clientAppMapper.findAuthClients(userId);
   }
 
   public List<ClientAppEntity> findAll() {
