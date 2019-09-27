@@ -1,10 +1,7 @@
 package com.learn.demo.repository;
 
 import com.learn.demo.entity.ClientAppEntity;
-import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -18,7 +15,4 @@ import org.springframework.stereotype.Repository;
 public interface ClientAppRepository extends JpaRepository<ClientAppEntity, String> {
 
   ClientAppEntity getByAppLoginUrl(String loginUrl);
-
-  //todo
-  //List<ClientAppEntity> findAuthClients(String userId);
 }
