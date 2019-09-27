@@ -1,4 +1,4 @@
-package com.learn.demo.aop;
+package com.learn.demo.config;
 
 import com.learn.demo.model.SystemConfigModel;
 import javax.annotation.Resource;
@@ -21,7 +21,7 @@ import org.springframework.web.filter.CorsFilter;
 @Slf4j
 @Component
 @Configuration
-public class MyCorsFilter {
+public class CorsFilterConfig {
 
   @Resource
   private SystemConfigModel systemConfigModel;

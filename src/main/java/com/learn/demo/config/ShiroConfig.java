@@ -1,12 +1,11 @@
-package com.learn.demo.utils.shiro;
+package com.learn.demo.config;
 
 import com.learn.demo.model.ShiroConfigModel;
+import com.learn.demo.utils.shiro.ShiroRealm;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
-import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
-import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.filter.mgt.DefaultFilter;
