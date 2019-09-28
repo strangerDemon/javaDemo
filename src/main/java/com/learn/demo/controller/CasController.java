@@ -10,6 +10,8 @@ import com.learn.demo.utils.CasUtils;
 import com.learn.demo.utils.JsonUtils;
 import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import java.util.Date;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -25,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  * @date 2019/9/19 9:37
  */
+@Api("CAS管理接口")
 @RestController
 @RequestMapping("/Cas")
 public class CasController {
@@ -46,6 +49,7 @@ public class CasController {
    *
    * @return 用户信息
    */
+  @ApiOperation(value = "客户端是否登录")
   @RequestMapping("/IsLogin")
   public ResultModel isLogin() {
     String userJson = redisUtils.get(session.getId());
@@ -61,6 +65,7 @@ public class CasController {
    *
    * @return 票据
    */
+  @ApiOperation(value = "客户端获取票据")
   @RequestMapping("/GetTicket")
   public ResultModel getTicket(@RequestParam("service") String service,
       @RequestParam("code") String code) {
@@ -90,6 +95,7 @@ public class CasController {
    * @param o 验证信息
    * @return 用户信息
    */
+  @ApiOperation(value = "客户端校验票据")
   @RequestMapping("/CheckTicket")
   public ResultModel checkTicket(@RequestBody Object o) {
     return ResultUtils.isOK();

@@ -8,9 +8,12 @@ import com.learn.demo.service.ClientAppService;
 import com.learn.demo.utils.JsonUtils;
 import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  * @date 2019/9/16 14:33
  */
+@Api("CAS客户端管理接口")
 @RestController
 @RequestMapping("/ClientApp")
 public class ClientAppController {
@@ -34,6 +38,7 @@ public class ClientAppController {
   @Resource
   private ClientAppService clientAppService;
 
+  @ApiOperation(value = "获取接入的客户端")
   @RequestMapping("/GetAllClientApp")
   public ResultModel getAllClientApp() {
     List<ClientAppEntity> list = clientAppService.findAll();
@@ -45,6 +50,7 @@ public class ClientAppController {
    *
    * @return 客户端列表
    */
+  @ApiOperation(value = "获取权限客户端")
   @RequestMapping("/GetAuthClientApp")
   public ResultModel getAuthClientApp() {
     UserEntity user = JsonUtils.toBean(redisUtils.get(session.getId()), UserEntity.class);
@@ -53,5 +59,17 @@ public class ClientAppController {
     }
     List<ClientAppEntity> list = clientAppService.findAuthClients(user.getUserId());
     return ResultUtils.isOK(list);
+  }
+
+  /**
+   * 创建客户端.
+   *
+   * @param entity 客户端
+   * @return 客户端
+   */
+  @ApiOperation(value = "创建客户端")
+  @RequestMapping("AddClientApp")
+  public ResultModel addClientApp(@RequestBody ClientAppEntity entity) {
+    return ResultUtils.isOK(clientAppService.addClientApp(entity));
   }
 }

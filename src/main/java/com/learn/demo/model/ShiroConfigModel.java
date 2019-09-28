@@ -21,15 +21,18 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "filter")
 public class ShiroConfigModel {
 
+  //是否是调试
+  private boolean debug;
+  // 调试时不过滤路径
+  private List<String> debugUnFilterList;
   //是否设置url
-  private boolean isSetUrl;
+  private boolean setUrl;
   //登录地址
   private String loginUrl;
   //成功地址
   private String successUrl;
   //无权限地址
   private String noAuthorityUrl;
-
   //不过滤路径列表
   private List<String> unFilterList;
   //过滤列表

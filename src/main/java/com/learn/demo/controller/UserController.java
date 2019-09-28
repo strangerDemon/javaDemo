@@ -10,6 +10,8 @@ import com.learn.demo.utils.JsonUtils;
 import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
 import com.learn.demo.utils.shiro.ShiroUtils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import java.util.Date;
 import java.util.Map;
 import javax.annotation.Resource;
@@ -26,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  * @date 2019/9/10 16:40
  */
+@Api("用户管理接口")
 @RestController
 @RequestMapping("/User")
 public class UserController {
@@ -41,21 +44,19 @@ public class UserController {
   @Resource
   private ShiroUtils shiroUtils;
 
-  @RequestMapping("/GetAllUser")
-  public ResultModel getAllUser() {
-    return ResultUtils.isOK(userService.findAll());
-  }
-
+  @ApiOperation(value = "获取用户分页列表")
   @RequestMapping("GetUserPage")
   public ResultModel getUserPage(@RequestBody Map data, Pageable page) {
     return ResultUtils.isOK(userService.findAll(page));
   }
 
+  @ApiOperation(value = "获取用户")
   @RequestMapping("/GetUser")
   public ResultModel getUser(String userId) {
     return ResultUtils.isOK(userService.getOne(userId));
   }
 
+  @ApiOperation(value = "创建用户")
   @RequestMapping("/AddUser")
   public ResultModel addUser(@RequestBody UserEntity entity) {
     return ResultUtils.isOK(userService.addUser(entity));
@@ -67,6 +68,7 @@ public class UserController {
    * @param entity 登录信息
    * @return 用户信息
    */
+  @ApiOperation(value = "用户登录")
   @RequestMapping("/UserLogin")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
     String userJson = redisUtils.get(session.getId());

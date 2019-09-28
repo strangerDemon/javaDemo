@@ -45,17 +45,23 @@ public class ShiroConfig {
       // 未授权的页面
       shiroFilterFactoryBean.setUnauthorizedUrl(shiroConfigModel.getNoAuthorityUrl());
     }
-
     // 拦截器
     Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
-    //不过滤的路径
+    // 设置调试时不过滤路径
+    if (shiroConfigModel.isDebug()) {
+      List<String> debugUnFilterList = shiroConfigModel.getDebugUnFilterList();
+      for (String path : debugUnFilterList) {
+        filterChainDefinitionMap.put(path, DefaultFilter.anon.name());//不要权限的路径
+      }
+    }
+    // 不过滤的路径
     List<String> unFilterList = shiroConfigModel.getUnFilterList();
     for (String path : unFilterList) {
       filterChainDefinitionMap.put(path, DefaultFilter.anon.name());//不要权限的路径
     }
 
-    //过滤路径
+    // 过滤路径
     List<String> filterList = shiroConfigModel.getFilterList();
     for (String path : filterList) {
       filterChainDefinitionMap.put(path, DefaultFilter.authc.name());
