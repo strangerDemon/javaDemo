@@ -23,7 +23,7 @@ const getters = {}
  */
 const mutations = {
   userLogin (state,info) {
-    HttpUtils.post('User/UserLogin', info).then(
+    HttpUtils.post('User/Login', info).then(
       function (resp) {
         state.userInfo=resp;
         router.push("/");
@@ -31,7 +31,7 @@ const mutations = {
     );
   },
   userLogout(state){
-    HttpUtils.post("User/UserLogout").then(function(resp){
+    HttpUtils.post("User/Logout").then(function(resp){
       state.userInfo={};
       router.push("Login");
     })

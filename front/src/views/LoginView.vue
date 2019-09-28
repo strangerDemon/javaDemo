@@ -18,9 +18,9 @@
         <div class="title">单点登录</div>
         <div class="desc"></div>
         <div class="login">
-          <el-input placeholder="请输入用户名" prefix-icon="el-icon-user" v-model="account" ref="account" @keyup.enter.native="handleClickLogin">
+          <el-input placeholder="请输入用户名/admin" prefix-icon="el-icon-user" v-model="account" ref="account" @keyup.enter.native="handleClickLogin">
           </el-input>
-          <el-input placeholder="请输入用户名" prefix-icon="el-icon-lock" ref="password" v-model="password" show-password>
+          <el-input placeholder="请输入用户名/123456" prefix-icon="el-icon-lock" ref="password" v-model="password" show-password>
           </el-input>
           <el-button @click="handleClickLogin" class="btn" type="primary" style="width:100%">登录</el-button>
           <el-alert v-show="!!errorText" :title="errorText" type="error" :closable="false"></el-alert>
