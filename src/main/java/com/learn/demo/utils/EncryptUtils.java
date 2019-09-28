@@ -33,6 +33,12 @@ public class EncryptUtils {
     encryptUtils = this;
   }
 
+  /**
+   * 加密.
+   *
+   * @param data 加密数据
+   * @return 机密结果
+   */
   public static String encrypt(String data) {
     return encrypt(data, encryptUtils.systemConfig.getEncryptKey());
   }
@@ -76,6 +82,12 @@ public class EncryptUtils {
     }
   }
 
+  /**
+   * 解密.
+   *
+   * @param data 解密数据
+   * @return 解密结果
+   */
   public static String decrypt(String data) {
     return decrypt(data, encryptUtils.systemConfig.getEncryptKey());
   }
@@ -110,5 +122,16 @@ public class EncryptUtils {
       log.error("encrypt:{}", e.toString());
       throw new MyExceptionModel(e.getMessage());
     }
+  }
+
+  /**
+   * test.
+   *
+   * @param args args
+   */
+  public static void main(String[] args) {
+    String key = "123456";
+    String value = encrypt(key, "123456789encrypt");
+    System.out.println("key:" + value);
   }
 }

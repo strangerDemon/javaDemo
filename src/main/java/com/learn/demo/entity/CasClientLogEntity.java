@@ -37,11 +37,11 @@ public class CasClientLogEntity {
 
   private Date ticketCreateTime;
 
-  private Date ticketValidateTime;
-
   private Integer ticketEffectiveTime;
 
   private Integer ticketValidated;
+
+  private Date ticketValidateTime;
 
   private Date loginTime;
 
