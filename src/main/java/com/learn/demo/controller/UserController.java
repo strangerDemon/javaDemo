@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  * @date 2019/9/10 16:40
  */
-@Api("用户管理接口")
+@Api(value = "用户管理接口")
 @RestController
 @RequestMapping("/User")
 public class UserController {
@@ -44,20 +44,42 @@ public class UserController {
   @Resource
   private ShiroUtils shiroUtils;
 
-  @ApiOperation(value = "获取用户分页列表")
-  @RequestMapping("GetUserPage")
-  public ResultModel getUserPage(@RequestBody Map data, Pageable page) {
-    return ResultUtils.isOK(userService.findAll(page));
-  }
+  //region  查询
 
+  /**
+   * 根据用户ID获取用户.
+   *
+   * @param userId 用户ID
+   * @return 用户
+   */
   @ApiOperation(value = "获取用户")
-  @RequestMapping("/GetUser")
+  @RequestMapping("/GetById")
   public ResultModel getUser(String userId) {
     return ResultUtils.isOK(userService.getOne(userId));
   }
 
+  /**
+   * 获取用户分页列表.
+   *
+   * @param data 请求参数
+   * @param page 分页参数
+   * @return 用户列表
+   */
+  @ApiOperation(value = "获取用户分页列表")
+  @RequestMapping("GetList")
+  public ResultModel getUserList(@RequestBody Map data, Pageable page) {
+    return ResultUtils.isOK(userService.findAll(data, page));
+  }
+  //endregion
+
+  /**
+   * 创建用户.
+   *
+   * @param entity 用户
+   * @return 用户
+   */
   @ApiOperation(value = "创建用户")
-  @RequestMapping("/AddUser")
+  @RequestMapping("/Add")
   public ResultModel addUser(@RequestBody UserEntity entity) {
     return ResultUtils.isOK(userService.addUser(entity));
   }
@@ -69,7 +91,7 @@ public class UserController {
    * @return 用户信息
    */
   @ApiOperation(value = "用户登录")
-  @RequestMapping("/UserLogin")
+  @RequestMapping("/Login")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
     String userJson = redisUtils.get(session.getId());
     RedisUserModel redisUser;
@@ -82,7 +104,7 @@ public class UserController {
       redisUser.setPassword(user.getPassword());
       redisUser.setLogTime(new Date());
       //casLog日志
-      CasLogEntity casLog = casLogService.createCasLog(session.getId(), user);
+      CasLogEntity casLog = casLogService.addCasLog(session.getId(), user);
       if (casLog != null) {
         redisUser.setCasLogId(casLog.getCasLogId());
       }

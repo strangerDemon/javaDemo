@@ -11,8 +11,10 @@ import com.learn.demo.utils.ResultUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
+import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  * @date 2019/9/16 14:33
  */
-@Api("CAS客户端管理接口")
+@Api(value = "CAS客户端管理接口")
 @RestController
 @RequestMapping("/ClientApp")
 public class ClientAppController {
@@ -38,12 +40,21 @@ public class ClientAppController {
   @Resource
   private ClientAppService clientAppService;
 
+  //region 查询
+
+  /**
+   * 获取客户端列表.
+   *
+   * @param data     过滤参数
+   * @param pageable 分页参数
+   * @return 客户端列表
+   */
   @ApiOperation(value = "获取接入的客户端")
-  @RequestMapping("/GetAllClientApp")
-  public ResultModel getAllClientApp() {
-    List<ClientAppEntity> list = clientAppService.findAll();
-    return ResultUtils.isOK(list);
+  @RequestMapping("/GetList")
+  public ResultModel getClientAppList(@RequestBody Map data, Pageable pageable) {
+    return ResultUtils.isOK(clientAppService.findAll(data, pageable));
   }
+  //endregion
 
   /**
    * 获取账户权限类的客户端.

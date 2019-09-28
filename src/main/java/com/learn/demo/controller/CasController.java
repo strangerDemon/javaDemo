@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  * @date 2019/9/19 9:37
  */
-@Api("CAS管理接口")
+@Api(value = "CAS管理接口")
 @RestController
 @RequestMapping("/Cas")
 public class CasController {
