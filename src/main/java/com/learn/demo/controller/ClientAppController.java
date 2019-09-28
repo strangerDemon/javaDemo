@@ -62,8 +62,8 @@ public class ClientAppController {
    * @return 客户端列表
    */
   @ApiOperation(value = "获取权限客户端")
-  @RequestMapping("/GetAuthClientApp")
-  public ResultModel getAuthClientApp() {
+  @RequestMapping("/GetMyList")
+  public ResultModel getAuthClientAppList() {
     UserEntity user = JsonUtils.toBean(redisUtils.get(session.getId()), UserEntity.class);
     if (user == null) {
       throw new MyExceptionModel("账号未登录");
@@ -79,7 +79,7 @@ public class ClientAppController {
    * @return 客户端
    */
   @ApiOperation(value = "创建客户端")
-  @RequestMapping("AddClientApp")
+  @RequestMapping("Add")
   public ResultModel addClientApp(@RequestBody ClientAppEntity entity) {
     return ResultUtils.isOK(clientAppService.addClientApp(entity));
   }
