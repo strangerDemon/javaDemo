@@ -14,6 +14,8 @@
     
     MyBatis-Plus + Jpa
     
+    Swagger2
+    
 ## 前端框架
     
     Vue

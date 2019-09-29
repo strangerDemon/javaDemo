@@ -13,7 +13,7 @@ filter:
     - "/**/*.ico"
     - "/**/*.ttf"
     - "/**/*.woff"
-    - "/User/UserLogin"
+    - "/User/Login"
     - "/Cas/IsLogin"
   filterList: #过滤路径
     - "/**" # /** 匹配本路径且包含子路径, /*

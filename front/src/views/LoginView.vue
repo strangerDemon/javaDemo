@@ -5,9 +5,9 @@
     </div>
     <div class="footer">
       <p class="tc">
-        版权所有©厦门市土地开发总公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术支持：福建省地质测绘院（厦门分院）
+        版权所有©strangerDemo
         <br />
-        <a style="color:#000" href="http://www.miitbeian.gov.cn/"> 闽ICP备17028613号-1</a>
+        <a style="color:#000" href="http://www.miitbeian.gov.cn/"> xxx</a>
       </p>
     </div>
     <div class="main">
@@ -96,7 +96,6 @@
     & .footer {
       position: fixed;
       bottom: 0px;
-      height: 100px;
       text-align: center;
       font-size: 12px;
       width: 100%
@@ -126,7 +125,7 @@
       & .content {
         position: absolute;
         left: 50%;
-        margin-left: -150px;
+        margin-left: -190px;
         /*  border-bottom: 10px solid rgba(0, 121, 254, 1); 边框 */
         background-color: #fff;
         padding: 20px 40px;
