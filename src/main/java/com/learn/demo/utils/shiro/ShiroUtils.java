@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  * @date 2019/9/23 16:34
  */
-@Slf4j
 @Component
 public class ShiroUtils {
 
@@ -43,6 +42,21 @@ public class ShiroUtils {
     } else {
       token.clear();
       throw new MyExceptionModel("尝试登录系统失败,无权限");
+    }
+  }
+
+  /**
+   * shiro 登出用户.
+   */
+  public void logout() {
+    Subject subject = SecurityUtils.getSubject();
+    try {
+      subject.logout();
+    } catch (Exception ex) {
+      throw new MyExceptionModel(ex.getMessage());
+    }
+    if (subject.isAuthenticated()) {
+      throw new MyExceptionModel("尝试登出系统失败");
     }
   }
 }

@@ -15,6 +15,6 @@
 	      FROM
 		        ClientAppAuth auth
         WHERE
-	      auth.userId = #{userId})
+	          auth.userId = #{userId})
     </select>
 </mapper>

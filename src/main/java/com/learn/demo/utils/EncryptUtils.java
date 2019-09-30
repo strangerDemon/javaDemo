@@ -18,7 +18,6 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  * @date 2019/9/17 15:01
  */
-@Slf4j
 @Component
 public class EncryptUtils {
 
@@ -77,7 +76,6 @@ public class EncryptUtils {
       return Base64.getEncoder().encodeToString(encrypted);
 
     } catch (Exception e) {
-      log.error("encrypt:{}", e.toString());
       throw new MyExceptionModel(e.getMessage());
     }
   }
@@ -119,7 +117,6 @@ public class EncryptUtils {
       byte[] original = cipher.doFinal(encrypted1);
       return new String(original);
     } catch (Exception e) {
-      log.error("encrypt:{}", e.toString());
       throw new MyExceptionModel(e.getMessage());
     }
   }
