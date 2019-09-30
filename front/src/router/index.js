@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/views/IndexView'
 import Login from '@/views/LoginView'
-import NotFound from '@/views/ErrorView'
+import CasLogin from '@/views/CasLoginView'
+import Error from '@/views/ErrorView'
+import Logout from '@/views/LogoutView'
 import HttpUtils from '@/utils/httpUtils/axiosUtils'
 Vue.use(Router)
 
@@ -19,9 +21,19 @@ let router = new Router({
       component: Login
     },
     {
+      path: '/CasLogin', //之前写测试demo的路径...
+      name: 'CasLogin',
+      component: CasLogin
+    },
+    {
+      path: '/Logout',
+      name: 'Logout',
+      component: Logout
+    },
+    {
       path: '/404',
       name: '404',
-      component: NotFound
+      component: Error
     }
   ]
 });
@@ -36,7 +48,7 @@ router.beforeResolve(function (to, from, next) {
   //时都去请求一次
   HttpUtils.post('Cas/IsLogin')
     .then(function (resp) {
-      if (resp instanceof Object) { //已登录
+      if (resp instanceof Object) { //简单判断，登录成功对象，失败为string
         next();
       } else if (to.name == "404" || to.name == "Login") { //不限定路径
         next();

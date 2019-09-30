@@ -67,7 +67,7 @@ export default {
       this.$store.commit("getClientAppList");
     },
     openClient(client) {
-      window.open(client.loginUrl);
+      window.open(client.appLoginUrl);
     },
     singOut() {
       let vm = this;

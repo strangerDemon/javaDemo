@@ -17,21 +17,15 @@
     },
     props: {},
     data() {
-      return {
-      }
+      return {}
     },
     computed: {},
     watch: {},
     methods: {
-      init() {
-        let vm = this
-      }
     },
     brforeCreate() {},
     created() {},
-    mounted() {
-      this.init()
-    },
+    mounted() {},
     beforeDestroy() {}
   }
 </script>

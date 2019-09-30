@@ -33,7 +33,7 @@ const mutations = {
   userLogout(state){
     HttpUtils.post("User/Logout").then(function(resp){
       state.userInfo={};
-      router.push("Login");
+      router.push("Logout");
     })
   }
 }

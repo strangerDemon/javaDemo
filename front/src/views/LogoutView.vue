@@ -13,7 +13,7 @@
             <p>为了安全，请关闭当前tab页</p>
             <p>
               <span>即将跳转<b class="redirect" onclick="redirect()">跳转</b></span>
-              <span>等待<b id="countDown">10</b>秒</span>
+              <span>等待<b>{{time}}</b>秒</span>
             </p>
           </div>
         </div>
@@ -23,21 +23,39 @@
 </template>
 
 <script>
+  import router from '@/router'
   export default {
     name: 'logout-view',
     directives: {},
     components: {},
     props: {},
     data() {
-      return {}
+      return {
+        time: 10
+      }
     },
     computed: {},
     watch: {},
-    methods: {},
+    methods: {
+      countDown() {
+        let vm = this
+        let interval = setInterval(function() {
+          vm.time--;
+          if (time <= 0) {
+            clearInterval(interval);
+            vm.redirect();
+          }
+        }, 1000);
+      },
+      redirect() {
+        router.push("Login");
+      }
+    },
     brforeCreate() {},
-    //app created=>map created =>mapSwitch created=> map mounted=> mapSwitch mounted=>app mounted
     created() {},
-    mounted() {},
+    mounted() {
+      this.countDown()
+    },
     beforeDestroy() {}
   }
 </script>
