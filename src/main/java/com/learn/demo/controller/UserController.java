@@ -115,4 +115,17 @@ public class UserController {
     }
     return ResultUtils.isOK(redisUser);
   }
+
+  /**
+   * 用户登出接口.
+   *
+   * @return info
+   */
+  @ApiOperation(value = "用户登出接口")
+  @RequestMapping("/Logout")
+  public ResultModel userLogout() {
+    redisUtils.delete(session.getId());
+    shiroUtils.logout();
+    return ResultUtils.isOK("登出成功！");
+  }
 }

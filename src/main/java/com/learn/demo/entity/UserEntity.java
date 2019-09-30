@@ -33,7 +33,7 @@ public class UserEntity {
   private String password;
   private String realName;
   private String headIcon;
-  private int gender;
+  private Integer gender = 1;
   @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date birthday;

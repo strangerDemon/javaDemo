@@ -43,6 +43,10 @@ public class ShiroRealm extends AuthorizingRealm {
   @Lazy
   private HttpSession session;
 
+  @Resource
+  @Lazy
+  private ShiroUtils shiroUtils;
+
   /**
    * 登录认证.每次接口访问时，校验用户是否登录
    *
@@ -57,7 +61,7 @@ public class ShiroRealm extends AuthorizingRealm {
     UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
     try {
       UserEntity user = userService.getByAccount(token.getUsername());
-      if (user != null) {
+      if (user != null && updateRedisUser()) {
         return new SimpleAuthenticationInfo(user.getAccount(), user.getPassword(), getName());
       }
     } catch (Exception e) {
@@ -68,9 +72,7 @@ public class ShiroRealm extends AuthorizingRealm {
   }
 
   /**
-   * 权限认证: roles、permissions.
-   *  =>@RequiresRoles("***") 角色权限.
-   *  =>@RequiresPermissions("****") 账号的接口权限.
+   * 权限认证: roles、permissions. =>@RequiresRoles("***") 角色权限. =>@RequiresPermissions("****") 账号的接口权限.
    *
    * @param principals principals 身份集合
    * @return AuthorizationInfo
@@ -89,4 +91,18 @@ public class ShiroRealm extends AuthorizingRealm {
     }
   }
 
+  /**
+   * redis 用户不存在，退出shiro. redis 用户存在，更新shiro时效性
+   *
+   * @return boolean
+   */
+  private boolean updateRedisUser() {
+    String userJson = redisUtils.get(session.getId());
+    if (userJson != null && !userJson.equals("")) {
+      redisUtils.set(session.getId(), userJson);
+      return true;
+    }
+    shiroUtils.logout();
+    return false;
+  }
 }

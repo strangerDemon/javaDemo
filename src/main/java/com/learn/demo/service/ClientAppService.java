@@ -69,4 +69,24 @@ public class ClientAppService {
     return clientAppRepository.save(entity);
   }
 
+  //region cas业务
+
+  /**
+   * 校验service获取客户端.
+   */
+  public ClientAppEntity checkService(Map data) {
+    String service = "";
+    try {
+      service = data.get("service").toString();
+    } catch (Exception ex) {
+      throw new MyExceptionModel(ex.getMessage());
+    }
+    ClientAppEntity client = clientAppRepository.getByAppLoginUrl(service);
+    if (client == null) {
+      throw new MyExceptionModel("无效service");
+    }
+    return client;
+  }
+
+  //endregion
 }

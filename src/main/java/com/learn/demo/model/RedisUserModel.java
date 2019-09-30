@@ -2,7 +2,7 @@ package com.learn.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
-import java.util.List;
+import java.util.Map;
 import lombok.Data;
 
 /**
@@ -33,5 +33,5 @@ public class RedisUserModel {
   // cas 日志
   private String casLogId;
 
-  private List<RedisClientModel> clients;
+  private Map<String,RedisClientModel> clients;
 }

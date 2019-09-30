@@ -40,17 +40,18 @@ public class ClientAppEntity {
 
   private String managerTel;
 
-  private Integer isDefaultApp;
+  private Integer isDefaultApp = 0;
 
-  private Integer singleLogout;
+  private Integer singleLogout = 1;
 
-  private Integer forceLogout;
+  private Integer forceLogout = 0;
 
-  private Integer sortCode;
+  private Integer sortCode = 0;
 
   private String description;
+
   @JsonIgnore
-  private Integer enabledMark;
+  private Integer enabledMark = 1;
   @JsonIgnore
-  private Integer deleteMark;
+  private Integer deleteMark = 0;
 }
