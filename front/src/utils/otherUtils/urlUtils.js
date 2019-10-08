@@ -8,7 +8,7 @@ export const transformToJson = function (url) {
   let params = url.split('&');
   for (let i = 0, j = params.length; i < j; i++) {
     let param = params[i].split('=');
-    data[param[0]] = encodeURI(param[1]);
+    data[param[0]] = decodeURIComponent(param[1]);
   }
   return data;
 }

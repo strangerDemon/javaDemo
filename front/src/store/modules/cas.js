@@ -22,7 +22,7 @@ const mutations = {
       function (resp) {
         console.log("getTicket",resp)
         if(resp){
-          window.open(info.service+"?ticket="+resp,"_self")
+          window.open(info.service+"?ST="+resp,"_self")
         }
       }
     );
