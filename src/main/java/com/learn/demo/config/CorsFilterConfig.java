@@ -1,6 +1,9 @@
 package com.learn.demo.config;
 
+import com.learn.demo.entity.ClientAppEntity;
 import com.learn.demo.model.SystemConfigModel;
+import com.learn.demo.service.ClientAppService;
+import java.util.List;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -26,6 +29,9 @@ public class CorsFilterConfig {
   @Resource
   private SystemConfigModel systemConfigModel;
 
+  @Resource
+  private ClientAppService clientAppService;
+
   /**
    * 过滤器.
    *
@@ -33,13 +39,20 @@ public class CorsFilterConfig {
    */
   @Bean
   public FilterRegistrationBean corsFilter() {
-    //cas 前端
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
-    config.addAllowedOrigin(systemConfigModel.getCasFrontUrl());
     config.addAllowedHeader("*");
     config.addAllowedMethod("*");
-    //todo:客户端
+    //cas 前端
+    String[] casFrontUrls = systemConfigModel.getCasFrontUrl().split(",");
+    for (String casUrl : casFrontUrls) {
+      config.addAllowedOrigin(casUrl);
+    }
+    //客户端
+    List<ClientAppEntity> clients = clientAppService.findAll();
+    for (ClientAppEntity client : clients) {
+      config.addAllowedOrigin(client.getAppLoginUrl());
+    }
 
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     source.registerCorsConfiguration("/**", config);
