@@ -1,4 +1,4 @@
-package com.learn.demo.utils;
+package com.learn.demo.utils.redis;
 
 import com.learn.demo.model.SystemConfigModel;
 import java.util.HashMap;
