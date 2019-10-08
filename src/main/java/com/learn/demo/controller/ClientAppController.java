@@ -6,7 +6,7 @@ import com.learn.demo.model.MyExceptionModel;
 import com.learn.demo.model.ResultModel;
 import com.learn.demo.service.ClientAppService;
 import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.RedisUtils;
+import com.learn.demo.utils.redis.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

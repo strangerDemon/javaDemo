@@ -7,7 +7,8 @@ import com.learn.demo.model.ResultModel;
 import com.learn.demo.service.CasLogService;
 import com.learn.demo.service.UserService;
 import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.RedisUtils;
+import com.learn.demo.utils.redis.RedisUserUtils;
+import com.learn.demo.utils.redis.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
 import com.learn.demo.utils.shiro.ShiroUtils;
 import io.swagger.annotations.Api;
@@ -40,7 +41,7 @@ public class UserController {
   @Resource
   private CasLogService casLogService;
   @Resource
-  private RedisUtils redisUtils;
+  private RedisUserUtils redisUserUtils;
   @Resource
   private ShiroUtils shiroUtils;
 
@@ -93,9 +94,8 @@ public class UserController {
   @ApiOperation(value = "用户登录")
   @RequestMapping("/Login")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
-    String userJson = redisUtils.get(session.getId());
-    RedisUserModel redisUser;
-    if (userJson == null || userJson.equals("")) {
+    RedisUserModel redisUser = redisUserUtils.getUser(session.getId());
+    if (redisUser == null) {
       UserEntity user = userService.userLogin(entity);
       redisUser = new RedisUserModel();
       redisUser.setAccount(user.getAccount());
@@ -108,10 +108,10 @@ public class UserController {
       if (casLog != null) {
         redisUser.setCasLogId(casLog.getCasLogId());
       }
-      redisUtils.set(session.getId(), JsonUtils.toJson(redisUser));//存redis
-      shiroUtils.login(user);//存shiro
-    } else {
-      redisUser = JsonUtils.toBean(userJson, RedisUserModel.class);
+      //存redis
+      redisUserUtils.save(session.getId(), redisUser);
+      //存shiro
+      shiroUtils.login(user);
     }
     return ResultUtils.isOK(redisUser);
   }
@@ -124,7 +124,7 @@ public class UserController {
   @ApiOperation(value = "用户登出接口")
   @RequestMapping("/Logout")
   public ResultModel userLogout() {
-    redisUtils.delete(session.getId());
+    redisUserUtils.delete(session.getId());
     shiroUtils.logout();
     return ResultUtils.isOK("登出成功！");
   }

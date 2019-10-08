@@ -45,6 +45,13 @@ public class ClientAppService {
   }
 
   /**
+   * 获取所有.
+   */
+  public List<ClientAppEntity> findAll() {
+    return clientAppRepository.findAll();
+  }
+
+  /**
    * 获取分页列表.
    */
   public Page<ClientAppEntity> findAll(Map data, Pageable pageable) {

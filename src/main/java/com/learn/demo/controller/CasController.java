@@ -5,9 +5,8 @@ import com.learn.demo.model.RedisUserModel;
 import com.learn.demo.model.ResultModel;
 import com.learn.demo.service.ClientAppService;
 import com.learn.demo.utils.CasUtils;
-import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import com.learn.demo.utils.redis.RedisUserUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.Map;
@@ -33,7 +32,7 @@ public class CasController {
   private CasUtils casUtils;
 
   @Resource
-  private RedisUtils redisUtils;
+  private RedisUserUtils redisUserUtils;
 
   @Resource
   private ClientAppService clientAppService;
@@ -49,11 +48,10 @@ public class CasController {
   @ApiOperation(value = "客户端是否登录")
   @RequestMapping("/IsLogin")
   public ResultModel isLogin() {
-    String userJson = redisUtils.get(session.getId());
-    if (userJson == null || userJson.equals("")) {
+    RedisUserModel redisUser = redisUserUtils.getUser(session.getId());
+    if (redisUser == null) {
       return ResultUtils.isOK("未登录");
     }
-    RedisUserModel redisUser = JsonUtils.toBean(userJson, RedisUserModel.class);
     return ResultUtils.isOK(redisUser);
   }
 
@@ -74,12 +72,12 @@ public class CasController {
   /**
    * 校验颁发的ticket的正确性.
    *
-   * @param o 验证信息
+   * @param data 验证信息
    * @return 用户信息
    */
   @ApiOperation(value = "客户端校验票据")
-  @RequestMapping("/CheckTicket")
-  public ResultModel checkTicket(@RequestBody Object o) {
-    return ResultUtils.isOK();
+  @RequestMapping("/VerifyTicket")
+  public ResultModel verifyTicket(@RequestBody Map data) {
+    return ResultUtils.isOK(casUtils.verifyTicket(data));
   }
 }
