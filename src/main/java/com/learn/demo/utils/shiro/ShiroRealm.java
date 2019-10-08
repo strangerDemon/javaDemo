@@ -3,7 +3,7 @@ package com.learn.demo.utils.shiro;
 import com.learn.demo.entity.UserEntity;
 import com.learn.demo.service.UserService;
 import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.RedisUtils;
+import com.learn.demo.utils.redis.RedisUtils;
 import java.util.Collection;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;

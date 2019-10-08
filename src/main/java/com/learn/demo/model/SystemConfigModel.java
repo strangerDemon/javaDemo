@@ -28,5 +28,5 @@ public class SystemConfigModel {
 
   private String encryptKey;
 
-  private String casFrontUrl;
+  private String casFrontUrl = "";
 }

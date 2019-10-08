@@ -2,11 +2,13 @@ package com.learn.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import lombok.Data;
 
 /**
  * cas登录redis缓存的用户信息.
+ *
  * @author demo
  * @version 1.0.0
  * @date 2019/9/22 18:05
@@ -33,5 +35,5 @@ public class RedisUserModel {
   // cas 日志
   private String casLogId;
 
-  private Map<String,RedisClientModel> clients;
+  private Map<String, RedisClientModel> clients = new HashMap<String, RedisClientModel>();
 }

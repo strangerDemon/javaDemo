@@ -19,7 +19,8 @@ public class ResultModel {
   private String msg;
   //数据
   private Object data;
-
+  //时间戳
+  private long timestamp = System.currentTimeMillis();
   /**
    * 根据枚举对象创建返回对象.
    *
