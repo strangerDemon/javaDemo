@@ -5,3 +5,5 @@ system:
   encryptKey: "123456789encrypt" #加密 16位
 
   casFrontUrl: "http://localhost:9000,http://192.168.3.105:9000,http://www.xxx.com" #cas 前端部署地址
+
+  ticketEffectiveTimeOut: 10 #ticket 有效时长 单位s

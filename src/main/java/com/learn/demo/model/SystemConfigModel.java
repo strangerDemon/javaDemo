@@ -29,4 +29,6 @@ public class SystemConfigModel {
   private String encryptKey;
 
   private String casFrontUrl = "";
+
+  private Integer ticketEffectiveTimeOut;
 }
