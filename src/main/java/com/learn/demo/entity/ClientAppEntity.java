@@ -36,6 +36,8 @@ public class ClientAppEntity {
 
   private String appIcon;
 
+  private String appPlatform;
+
   private String manager;
 
   private String managerTel;
