@@ -1,9 +1,10 @@
 package com.learn.demo.utils.shiro;
 
 import com.learn.demo.entity.UserEntity;
+import com.learn.demo.model.RedisUserModel;
 import com.learn.demo.service.UserService;
 import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.redis.RedisUtils;
+import com.learn.demo.utils.redis.RedisUserUtils;
 import java.util.Collection;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -37,7 +38,7 @@ public class ShiroRealm extends AuthorizingRealm {
 
   @Resource
   @Lazy
-  private RedisUtils redisUtils;
+  private RedisUserUtils redisUserUtils;
 
   @Resource
   @Lazy
@@ -97,9 +98,9 @@ public class ShiroRealm extends AuthorizingRealm {
    * @return boolean
    */
   private boolean updateRedisUser() {
-    String userJson = redisUtils.get(session.getId());
-    if (userJson != null && !userJson.equals("")) {
-      redisUtils.set(session.getId(), userJson);
+    RedisUserModel redisUser = redisUserUtils.getUserOfSessionId(session.getId());
+    if (redisUser != null) {
+      redisUserUtils.update(redisUser);
       return true;
     }
     shiroUtils.logout();

@@ -6,10 +6,8 @@ import com.learn.demo.model.RedisUserModel;
 import com.learn.demo.model.ResultModel;
 import com.learn.demo.service.CasLogService;
 import com.learn.demo.service.UserService;
-import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.redis.RedisUserUtils;
-import com.learn.demo.utils.redis.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import com.learn.demo.utils.redis.RedisUserUtils;
 import com.learn.demo.utils.shiro.ShiroUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -94,7 +92,7 @@ public class UserController {
   @ApiOperation(value = "用户登录")
   @RequestMapping("/Login")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
-    RedisUserModel redisUser = redisUserUtils.getUser(session.getId());
+    RedisUserModel redisUser = redisUserUtils.getUserOfSessionId(session.getId());
     if (redisUser == null) {
       UserEntity user = userService.userLogin(entity);
       redisUser = new RedisUserModel();

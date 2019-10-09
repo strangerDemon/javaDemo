@@ -1,5 +1,6 @@
 package com.learn.demo.utils.redis;
 
+import com.learn.demo.model.MyExceptionModel;
 import com.learn.demo.model.RedisUserModel;
 import com.learn.demo.utils.JsonUtils;
 import javax.annotation.Resource;
@@ -19,42 +20,54 @@ public class RedisUserUtils {
   private RedisUtils redisUtils;
 
   /**
-   * 清除redis用户登录信息.
+   * 获取用户 userId=>sessionId=>user.
    */
-  public void delete(String sessionId) {
-    String userId = redisUtils.get(sessionId);
-    redisUtils.delete(sessionId);
-    redisUtils.delete(userId);
-  }
-
-
-  /**
-   * 获取redis用户.
-   */
-  public RedisUserModel getUser(String sessionId) {
-    String userId = redisUtils.get(sessionId);
-    if (userId == null || userId.equals("")) {
+  public RedisUserModel getUserOfUserId(String userId) {
+    String sessionId = redisUtils.get(userId);
+    if (sessionId == null || sessionId.equals("")) {
       return null;
     }
-    String userJson = redisUtils.get(userId);
+    return getUserOfSessionId(sessionId);
+  }
+
+  /**
+   * 获取用户 sessionId=>user.
+   */
+  public RedisUserModel getUserOfSessionId(String sessionId) {
+    String userJson = redisUtils.get(sessionId);
     if (userJson == null || userJson.equals("")) {
       return null;
     }
     return JsonUtils.toBean(userJson, RedisUserModel.class);
+
   }
 
   /**
-   * redis 保存用户 sessionId=>userId=>user 解决多地登录.
+   * redis 保存用户 userId=>sessionId=>user 解决多地登录.
    */
   public void save(String sessionId, RedisUserModel redisUser) {
-    redisUtils.set(sessionId, redisUser.getUserId());
-    redisUtils.set(redisUser.getUserId(), JsonUtils.toJson(redisUser));
+    redisUtils.set(redisUser.getUserId(), sessionId);
+    redisUtils.set(sessionId, JsonUtils.toJson(redisUser));
   }
 
   /**
    * 更新用户.
    */
-  public void update(String userId, RedisUserModel redisUser) {
-    redisUtils.set(redisUser.getUserId(), JsonUtils.toJson(redisUser));
+  public void update(RedisUserModel redisUser) {
+    String sessionId = redisUtils.get(redisUser.getUserId());
+    if (sessionId == null || sessionId.equals("")) {
+      throw new MyExceptionModel("redis更新用户信息异常:找不到sessionId");
+    }
+    redisUtils.set(redisUser.getUserId(),sessionId);
+    redisUtils.set(sessionId, JsonUtils.toJson(redisUser));
+  }
+
+  /**
+   * 清除redis用户登录信息.
+   */
+  public void delete(String userId) {
+    String sessionId = redisUtils.get(userId);
+    redisUtils.delete(userId);
+    redisUtils.delete(sessionId);
   }
 }

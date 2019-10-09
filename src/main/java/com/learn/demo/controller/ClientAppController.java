@@ -1,13 +1,12 @@
 package com.learn.demo.controller;
 
 import com.learn.demo.entity.ClientAppEntity;
-import com.learn.demo.entity.UserEntity;
 import com.learn.demo.model.MyExceptionModel;
+import com.learn.demo.model.RedisUserModel;
 import com.learn.demo.model.ResultModel;
 import com.learn.demo.service.ClientAppService;
-import com.learn.demo.utils.JsonUtils;
-import com.learn.demo.utils.redis.RedisUtils;
 import com.learn.demo.utils.ResultUtils;
+import com.learn.demo.utils.redis.RedisUserUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
@@ -35,7 +34,7 @@ public class ClientAppController {
   private HttpSession session;
 
   @Resource
-  private RedisUtils redisUtils;
+  private RedisUserUtils redisUserUtils;
 
   @Resource
   private ClientAppService clientAppService;
@@ -64,7 +63,7 @@ public class ClientAppController {
   @ApiOperation(value = "获取权限客户端")
   @RequestMapping("/GetMyList")
   public ResultModel getAuthClientAppList() {
-    UserEntity user = JsonUtils.toBean(redisUtils.get(session.getId()), UserEntity.class);
+    RedisUserModel user = redisUserUtils.getUserOfSessionId(session.getId());
     if (user == null) {
       throw new MyExceptionModel("账号未登录");
     }
