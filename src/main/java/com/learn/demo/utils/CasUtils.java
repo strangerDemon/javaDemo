@@ -5,9 +5,10 @@ import com.learn.demo.entity.ClientAppEntity;
 import com.learn.demo.model.MyExceptionModel;
 import com.learn.demo.model.RedisClientModel;
 import com.learn.demo.model.RedisUserModel;
+import com.learn.demo.model.SystemConfigModel;
 import com.learn.demo.service.CasClientLogService;
+import com.learn.demo.utils.redis.RedisTicketUtils;
 import com.learn.demo.utils.redis.RedisUserUtils;
-import com.learn.demo.utils.redis.RedisUtils;
 import java.util.Date;
 import java.util.Map;
 import java.util.UUID;
@@ -25,13 +26,23 @@ import org.springframework.stereotype.Component;
 public class CasUtils {
 
   @Resource
-  private RedisUtils redisUtils;
-
-  @Resource
   private RedisUserUtils redisUserUtils;
 
   @Resource
+  private RedisTicketUtils redisTicketUtils;
+
+  @Resource
+  private DateUtils dateUtils;
+
+  @Resource
   private CasClientLogService casClientLogService;
+
+  @Resource
+  private SystemConfigModel systemConfigModel;
+
+  @Resource
+  private EnumUtils enumUtils;
+
   //ticket
 
   /**
@@ -53,33 +64,22 @@ public class CasUtils {
     String ticket = data.get("ST").toString();
     String service = data.get("service").toString();
     String code = data.get("code").toString();
-    String sessionIdKey = data.get("sessionIdKey").toString();
-    String sessionIdValue = data.get("sessionIdValue").toString();
+    String clientSessionId = data.get("sessionId").toString();
 
     if (ticket.equals("") || service.equals("") || code.equals("")) {
       throw new MyExceptionModel("验证票据参数不对");
     }
 
-    String userId = redisUtils.get(ticket);
+    String userId = redisTicketUtils.getUserId(ticket);
 
     if (userId == null) {
       throw new MyExceptionModel("无效票据！");
     }
 
-    String sessionId = redisUtils.get(userId);
-
-    if (sessionId == null) {
-      throw new MyExceptionModel("用户未登录！");
-    }
-
-    RedisUserModel user = JsonUtils.toBean(redisUtils.get(sessionId), RedisUserModel.class);
+    RedisUserModel user = redisUserUtils.getUserOfUserId(userId);
 
     if (user == null) {
       throw new MyExceptionModel("用户未登录！");
-    }
-
-    if (user.getClients().isEmpty()) {
-      throw new MyExceptionModel("用户未登录客户端！");
     }
 
     RedisClientModel clientModel = user.getClients().get(service);
@@ -87,32 +87,38 @@ public class CasUtils {
     if (clientModel == null) {
       throw new MyExceptionModel("客户端未登录！");
     } else {
-      redisUtils.delete(ticket);
+      redisTicketUtils.delete(ticket);
       if (clientModel.getTicketValidated().equals(-1)) {
         Map<String, RedisClientModel> clients = user.getClients();
         clients.remove(service);//移除旧的
 
         clientModel.setTicketValidated(1);
         clientModel.setTicketValidateTime(new Date());
-        clientModel.setSessionIdKey(sessionIdKey);
-        clientModel.setSessionIdValue(sessionIdValue);
-        ;
+        clientModel.setSessionIdValue(clientSessionId);
+
         String description = "";
 
         if (!clientModel.getAppLoginUrl().equals(service) || !clientModel.getCode().equals(code)) {
           clientModel.setTicketValidated(0);
           description = "客户端不一致！";
         }
+        if (dateUtils
+            .addSecond(clientModel.getTicketCreateTime(), clientModel.getTicketEffectiveTime())
+            .after(new Date())
+        ) {
+          clientModel.setTicketValidated(0);
+          description = "票据已过期！";
+        }
 
         CasClientLogEntity log = casClientLogService
-            .updateOfVerifyTicket(sessionId, clientModel, description);
+            .updateOfVerifyTicket(clientSessionId, clientModel, description);
 
         clientModel.setClientLogId(log.getAppLogId());
 
         clients.put(service, clientModel);
         user.setClients(clients);
 
-        redisUtils.set(sessionId, JsonUtils.toJson(user));//添加编辑后的
+        redisUserUtils.update(user);//添加编辑后的
 
         if (clientModel.getTicketValidated().equals(1)) {
           return user;
@@ -136,8 +142,8 @@ public class CasUtils {
    * @param data      前端数据
    * @return 票据
    */
-  public String addOrUpdateRedisClient(String sessionId, ClientAppEntity client, Map data) {
-    RedisUserModel redisUser = redisUserUtils.getUser(sessionId);
+  public String getTicket(String sessionId, ClientAppEntity client, Map data) {
+    RedisUserModel redisUser = redisUserUtils.getUserOfSessionId(sessionId);
     if (redisUser == null) {
       throw new MyExceptionModel("redis 用户数据不存在");
     }
@@ -155,20 +161,23 @@ public class CasUtils {
       redisClient.setAppId(client.getAppId());
       redisClient.setAppLoginUrl(client.getAppLoginUrl());
       redisClient.setAppName(client.getAppName());
+      redisClient.setTicketEffectiveTime(systemConfigModel.getTicketEffectiveTimeOut());
+      redisClient.setSessionIdKey(enumUtils.getSessionKey(client.getAppPlatform()));
     } else {
-      redisClientMap.remove(client.getAppId());//移除旧的
+      redisClientMap.remove(client.getAppLoginUrl());//移除旧的
     }
     String ticket = createTicket();
     redisClient.setCode(code);
     redisClient.setTicket(ticket);
     redisClient.setTicketCreateTime(new Date());
     redisClient.setTicketValidated(-1);
-    redisClientMap.put(client.getAppId(), redisClient);
+    redisClientMap.put(client.getAppLoginUrl(), redisClient);
     redisUser.setClients(redisClientMap);
 
-    casClientLogService.createOfTicket(sessionId, redisClient);
+    casClientLogService.createOfTicket(redisClient);
 
-    redisUserUtils.update(redisUser.getUserId(), redisUser);
+    redisUserUtils.update(redisUser);
+    redisTicketUtils.save(ticket, redisUser.getUserId());
     return ticket;
   }
 

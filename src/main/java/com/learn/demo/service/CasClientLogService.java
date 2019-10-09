@@ -1,12 +1,10 @@
 package com.learn.demo.service;
 
 import com.learn.demo.entity.CasClientLogEntity;
-import com.learn.demo.entity.UserEntity;
 import com.learn.demo.mapper.CasClientLogMapper;
-import com.learn.demo.model.MyExceptionModel;
 import com.learn.demo.model.RedisClientModel;
+import com.learn.demo.model.SystemConfigModel;
 import com.learn.demo.repository.CasClientLogRepository;
-import com.learn.demo.utils.EncryptUtils;
 import java.util.Date;
 import java.util.Map;
 import java.util.UUID;
@@ -51,7 +49,7 @@ public class CasClientLogService {
   /**
    * 颁发ticket时创建的日志.
    */
-  public void createOfTicket(String sessionId, RedisClientModel client) {
+  public void createOfTicket(RedisClientModel client) {
     CasClientLogEntity entity = new CasClientLogEntity();
     entity.setAppLogId(UUID.randomUUID().toString());
 
@@ -60,12 +58,11 @@ public class CasClientLogService {
     entity.setAppId(client.getAppId());
 
     entity.setTicket(client.getTicket());
-    entity.setTicketEffectiveTime(10);
+    entity.setTicketEffectiveTime(client.getTicketEffectiveTime());
     entity.setTicketCreateTime(client.getTicketCreateTime());
     entity.setTicketValidated(-1);
 
     entity.setCasLogId(client.getClientLogId());
-    entity.setClientSessionId(sessionId);
 
     casClientLogRepository.save(entity);
   }
@@ -73,23 +70,14 @@ public class CasClientLogService {
   /**
    * 验证ticket时修改日志.
    */
-  public CasClientLogEntity updateOfVerifyTicket(String logId, RedisClientModel client,
+  public CasClientLogEntity updateOfVerifyTicket(String sessionId,RedisClientModel client,
       String description) {
-    CasClientLogEntity entity = casClientLogRepository.getOne(logId);
-
-    entity.setAppId(client.getAppId());
-    entity.setAppName(client.getAppName());
-    entity.setAppUrl(client.getAppLoginUrl());
-    entity.setCasLogId(client.getClientLogId());
-    entity.setClientSessionId(client.getSessionIdValue());
-    entity.setTicket(client.getTicket());
-    entity.setTicketCreateTime(client.getTicketCreateTime());
-    entity.setTicketEffectiveTime(client.getTicketEffectiveTime());
+    CasClientLogEntity entity = casClientLogRepository.getByTicket(client.getTicket());
 
     entity.setDescription(description);
-
-    entity.setLoginTime(new Date());
+    entity.setTicketValidateTime(new Date());
     entity.setLogStatus(1);
+    entity.setClientSessionId(sessionId);
 
     return casClientLogRepository.save(entity);
   }

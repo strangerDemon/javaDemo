@@ -15,6 +15,7 @@ filter:
     - "/**/*.woff"
     - "/User/Login"
     - "/Cas/IsLogin"
+    - "/Cas/VerifyTicket"
   filterList: #过滤路径
     - "/**" # /** 匹配本路径且包含子路径, /*
   debugUnFilterList: # 调试时不过滤路径

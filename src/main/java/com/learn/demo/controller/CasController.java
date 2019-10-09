@@ -48,7 +48,7 @@ public class CasController {
   @ApiOperation(value = "客户端是否登录")
   @RequestMapping("/IsLogin")
   public ResultModel isLogin() {
-    RedisUserModel redisUser = redisUserUtils.getUser(session.getId());
+    RedisUserModel redisUser = redisUserUtils.getUserOfSessionId(session.getId());
     if (redisUser == null) {
       return ResultUtils.isOK("未登录");
     }
@@ -66,7 +66,7 @@ public class CasController {
 
     ClientAppEntity client = clientAppService.checkService(data);//数据库中的客户端对象
 
-    return ResultUtils.isOK(casUtils.addOrUpdateRedisClient(session.getId(), client, data));
+    return ResultUtils.isOK(casUtils.getTicket(session.getId(), client, data));
   }
 
   /**

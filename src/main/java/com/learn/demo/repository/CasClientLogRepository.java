@@ -14,4 +14,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CasClientLogRepository extends JpaRepository<CasClientLogEntity, String> {
 
+  CasClientLogEntity getByTicket(String ticket);
 }
