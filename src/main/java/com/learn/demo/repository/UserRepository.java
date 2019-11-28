@@ -17,5 +17,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, String> {
 
+  /**
+   * 获取用户对象.
+   * @param account 账号
+   * @return UserEntity
+   */
   UserEntity getByAccount(String account);
 }

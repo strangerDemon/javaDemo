@@ -50,12 +50,12 @@ public class UserService {
    * 用户登录.
    */
   public UserEntity userLogin(UserEntity entity) {
-    String encryptPS = EncryptUtils.encrypt(entity.getPassword());
+    String encryptPassword = EncryptUtils.encrypt(entity.getPassword());
     UserEntity user = userRepository.getByAccount(entity.getAccount());
     if (user == null) {
       throw new MyExceptionModel("账号不存在!");
     }
-    if (!encryptPS.equals(user.getPassword())) {
+    if (!encryptPassword.equals(user.getPassword())) {
       throw new MyExceptionModel("密码不正确!");
     }
     return user;

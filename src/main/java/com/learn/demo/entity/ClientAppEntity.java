@@ -10,7 +10,7 @@ import lombok.Data;
 
 /**
  * cas 客户端对象.
- *
+ * JsonIgnoreProperties=>类注解，作用是json序列化时将java bean中的一些属性忽略掉，序列化和反序列化都受影响。
  * @author demo
  * @version 1.0.0
  * @date 2019/9/16 10:28
@@ -18,9 +18,8 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "ClientApp")
-@JsonInclude(JsonInclude.Include.NON_NULL) //null不返回
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-//类注解，作用是json序列化时将java bean中的一些属性忽略掉，序列化和反序列化都受影响。
 public class ClientAppEntity {
 
   @Id

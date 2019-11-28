@@ -15,9 +15,18 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClientAppAuthRepository extends JpaRepository<ClientAppAuthEntity, String> {
 
-  //
+  /**
+   * 获取用户客户端权限.
+   * @param userId 用户id
+   * @return 权限列表
+   */
   List<ClientAppAuthEntity> findByUserId(String userId);
 
-  //
+  /**
+   * 获取客户端用户列表.
+   * @param clientId 客户端id
+   * @return 权限列表
+   */
+
   List<ClientAppAuthEntity> findByClientAppId(String clientId);
 }

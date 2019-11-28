@@ -18,7 +18,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "CasClientLog")
-@JsonInclude(JsonInclude.Include.NON_NULL) //null不返回
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class CasClientLogEntity {
 
@@ -42,8 +42,6 @@ public class CasClientLogEntity {
   private Integer ticketValidated;
 
   private Date ticketValidateTime;
-
-  private Date loginTime;
 
   private Date logoutTime;
 

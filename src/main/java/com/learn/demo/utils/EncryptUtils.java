@@ -26,7 +26,9 @@ public class EncryptUtils {
 
   private static EncryptUtils encryptUtils;
 
-  // 初始化的时候，将本类中的EncryptUtils赋值给静态的本类变量
+  /**
+   * 初始化的时候，将本类中的EncryptUtils赋值给静态的本类变量.
+   */
   @PostConstruct
   public void init() {
     encryptUtils = this;
@@ -54,7 +56,8 @@ public class EncryptUtils {
       if (data == null) {
         throw new MyExceptionModel("加密数据为空！");
       }
-      Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");//"算法/模式/补码方式"NoPadding PkcsPadding
+      //"算法/模式/补码方式"NoPadding PkcsPadding
+      Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
       int blockSize = cipher.getBlockSize();
 
       byte[] dataBytes = data.getBytes();
@@ -66,7 +69,6 @@ public class EncryptUtils {
       byte[] plaintext = new byte[plaintextLength];
       System.arraycopy(dataBytes, 0, plaintext, 0, dataBytes.length);
 
-      //            byte[] keyBytes=DigestUtils.md5DigestAsHex(key.getBytes())..getBytes();
       SecretKeySpec keySpec = new SecretKeySpec(key.getBytes(), "AES");
       IvParameterSpec ivSpec = new IvParameterSpec(key.getBytes());
 
@@ -106,8 +108,6 @@ public class EncryptUtils {
       byte[] encrypted1 = Base64.getDecoder().decode(data);
 
       Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
-
-      //            byte[] keyBytes=DigestUtils.md5DigestAsHex(key.getBytes()).getBytes();
 
       SecretKeySpec keySpec = new SecretKeySpec(key.getBytes(), "AES");
       IvParameterSpec ivSpec = new IvParameterSpec(key.getBytes());

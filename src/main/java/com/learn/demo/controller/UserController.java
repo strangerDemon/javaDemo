@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -29,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "用户管理接口")
 @RestController
-@RequestMapping("/User")
+@RequestMapping("User")
 public class UserController {
 
   @Resource
@@ -52,9 +53,9 @@ public class UserController {
    * @return 用户
    */
   @ApiOperation(value = "获取用户")
-  @RequestMapping("/GetById")
+  @RequestMapping(value = "GetById", method = RequestMethod.GET)
   public ResultModel getUser(String userId) {
-    return ResultUtils.isOK(userService.getOne(userId));
+    return ResultUtils.isOk(userService.getOne(userId));
   }
 
   /**
@@ -65,9 +66,9 @@ public class UserController {
    * @return 用户列表
    */
   @ApiOperation(value = "获取用户分页列表")
-  @RequestMapping("GetList")
+  @RequestMapping(value = "GetList", method = RequestMethod.GET)
   public ResultModel getUserList(@RequestBody Map data, Pageable page) {
-    return ResultUtils.isOK(userService.findAll(data, page));
+    return ResultUtils.isOk(userService.findAll(data, page));
   }
   //endregion
 
@@ -78,9 +79,9 @@ public class UserController {
    * @return 用户
    */
   @ApiOperation(value = "创建用户")
-  @RequestMapping("/Add")
+  @RequestMapping("Add")
   public ResultModel addUser(@RequestBody UserEntity entity) {
-    return ResultUtils.isOK(userService.addUser(entity));
+    return ResultUtils.isOk(userService.addUser(entity));
   }
 
   /**
@@ -90,7 +91,7 @@ public class UserController {
    * @return 用户信息
    */
   @ApiOperation(value = "用户登录")
-  @RequestMapping("/Login")
+  @RequestMapping("Login")
   public ResultModel userLogin(@RequestBody UserEntity entity) {
     RedisUserModel redisUser = redisUserUtils.getUserOfSessionId(session.getId());
     if (redisUser == null) {
@@ -111,7 +112,7 @@ public class UserController {
       //存shiro
       shiroUtils.login(user);
     }
-    return ResultUtils.isOK(redisUser);
+    return ResultUtils.isOk(redisUser);
   }
 
   /**
@@ -120,10 +121,10 @@ public class UserController {
    * @return info
    */
   @ApiOperation(value = "用户登出接口")
-  @RequestMapping("/Logout")
+  @RequestMapping("Logout")
   public ResultModel userLogout() {
     redisUserUtils.delete(session.getId());
     shiroUtils.logout();
-    return ResultUtils.isOK("登出成功！");
+    return ResultUtils.isOk("登出成功！");
   }
 }

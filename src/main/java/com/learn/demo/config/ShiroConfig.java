@@ -52,13 +52,15 @@ public class ShiroConfig {
     if (shiroConfigModel.isDebug()) {
       List<String> debugUnFilterList = shiroConfigModel.getDebugUnFilterList();
       for (String path : debugUnFilterList) {
-        filterChainDefinitionMap.put(path, DefaultFilter.anon.name());//不要权限的路径
+        //不要权限的路径
+        filterChainDefinitionMap.put(path, DefaultFilter.anon.name());
       }
     }
     // 不过滤的路径
     List<String> unFilterList = shiroConfigModel.getUnFilterList();
     for (String path : unFilterList) {
-      filterChainDefinitionMap.put(path, DefaultFilter.anon.name());//不要权限的路径
+      //不要权限的路径
+      filterChainDefinitionMap.put(path, DefaultFilter.anon.name());
     }
 
     // 过滤路径
@@ -68,13 +70,6 @@ public class ShiroConfig {
     }
 
     shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
-
-    // 添加自己的过滤器并且取名为jwt
-    //        Map<String, Filter> filterMap = new HashMap<String, Filter>(1);
-    //        filterMap.put("jwt", new JwtFilter());
-    //        shiroFilterFactoryBean.setFilters(filterMap);
-    // <!-- 过滤链定义，从上向下顺序执行，一般将/**放在最为下边
-    //        filterChainDefinitionMap.put("/**", "jwt");
 
     return shiroFilterFactoryBean;
   }
@@ -95,12 +90,6 @@ public class ShiroConfig {
      * http://shiro.apache.org/session-management.html#SessionManagement-
      * StatelessApplications%28Sessionless%29
      */
-    //    DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
-    //    DefaultSessionStorageEvaluator defaultSessionStorageEvaluator
-    //    = new DefaultSessionStorageEvaluator();
-    //    defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
-    //    subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
-    //    securityManager.setSubjectDAO(subjectDAO);
 
     return securityManager;
   }

@@ -20,7 +20,6 @@ const mutations = {
   getTicket(state, info) {
     HttpUtils.post('Cas/GetTicket', info).then(
       function (resp) {
-        console.log("getTicket",resp)
         if(resp){
           window.open(info.service+"?ST="+resp,"_self")
         }

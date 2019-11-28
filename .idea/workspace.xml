@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="create ticket ,verify ticket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/_readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/_readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/store/modules/cas.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/store/modules/cas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/aop/HttpAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/aop/HttpAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasClientLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasClientLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasClientLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasClientLogEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasLogEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppAuthEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppAuthEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/PlatformEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/PlatformEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/ResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppAuthMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppAuthMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/RedisClientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/RedisClientModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/SystemConfigModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/SystemConfigModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasClientLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasClientLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppAuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ConstUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ConstUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/EncryptUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ResultUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/Jurisdiction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/Jurisdiction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/ShiroUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/ShiroUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClientAppAuthMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClientAppAuthMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/system.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/system.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,21 +104,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xml/googleCheck.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.24096386" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources\mapper" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources" />
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
     </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 14 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -101,7 +145,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DemoApplication">
-    <configuration name="HttpUtilsTest.GetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScheduleTest.cronJob" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spring-Boot-Demo" />
       <extension name="coverage">
         <pattern>
@@ -110,14 +154,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.HttpUtilsTest" />
-      <option name="METHOD_NAME" value="GetTest" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.ScheduleTest" />
+      <option name="METHOD_NAME" value="cronJob" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpUtilsTest.PostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScheduleTest.testScheduleJob" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spring-Boot-Demo" />
       <extension name="coverage">
         <pattern>
@@ -126,14 +170,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.HttpUtilsTest" />
-      <option name="METHOD_NAME" value="PostTest" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.ScheduleTest" />
+      <option name="METHOD_NAME" value="testScheduleJob" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.getByAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.testAsyncCallBackTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spring-Boot-Demo" />
       <extension name="coverage">
         <pattern>
@@ -142,14 +186,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.UserServiceTest" />
-      <option name="METHOD_NAME" value="getByAccount" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.TaskTest" />
+      <option name="METHOD_NAME" value="testAsyncCallBackTask" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.getByUserId (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.testAsyncExecutorTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spring-Boot-Demo" />
       <extension name="coverage">
         <pattern>
@@ -158,15 +202,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.UserServiceTest" />
-      <option name="METHOD_NAME" value="getByUserId" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.TaskTest" />
+      <option name="METHOD_NAME" value="testAsyncExecutorTask" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.getByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
+    <configuration name="TaskTest.testTaskAsync" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.learn.demo.*" />
@@ -174,15 +218,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.UserServiceTest" />
-      <option name="METHOD_NAME" value="getByUserId" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.TaskTest" />
+      <option name="METHOD_NAME" value="testTaskAsync" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
+      <module name="Spring-Boot-Demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.demo.DemoApplication" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -191,20 +235,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserServiceTest.getByUserId" />
-      <item itemvalue="JUnit.HttpUtilsTest.GetTest" />
-      <item itemvalue="JUnit.UserServiceTest.getByUserId (1)" />
-      <item itemvalue="JUnit.UserServiceTest.getByAccount" />
-      <item itemvalue="JUnit.HttpUtilsTest.PostTest" />
       <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="JUnit.TaskTest.testTaskAsync" />
+      <item itemvalue="JUnit.TaskTest.testAsyncCallBackTask" />
+      <item itemvalue="JUnit.TaskTest.testAsyncExecutorTask" />
+      <item itemvalue="JUnit.ScheduleTest.cronJob" />
+      <item itemvalue="JUnit.ScheduleTest.testScheduleJob" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HttpUtilsTest.PostTest" />
-        <item itemvalue="JUnit.UserServiceTest.getByAccount" />
-        <item itemvalue="JUnit.UserServiceTest.getByUserId (1)" />
-        <item itemvalue="JUnit.HttpUtilsTest.GetTest" />
-        <item itemvalue="JUnit.UserServiceTest.getByUserId" />
+        <item itemvalue="JUnit.ScheduleTest.testScheduleJob" />
+        <item itemvalue="JUnit.ScheduleTest.cronJob" />
+        <item itemvalue="JUnit.TaskTest.testAsyncExecutorTask" />
+        <item itemvalue="JUnit.TaskTest.testAsyncCallBackTask" />
+        <item itemvalue="JUnit.TaskTest.testTaskAsync" />
       </list>
     </recent_temporary>
   </component>
@@ -234,125 +278,29 @@
       <workItem from="1569119665957" duration="6222000" />
       <workItem from="1569140542283" duration="3686000" />
       <workItem from="1569148638638" duration="5081000" />
-    </task>
-    <task id="LOCAL-00001" summary="单元测试">
-      <created>1568549331484</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1568549331484</updated>
-    </task>
-    <task id="LOCAL-00002" summary="connect sql">
-      <created>1568549400105</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1568549400105</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Result">
-      <created>1568549430982</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1568549430982</updated>
-    </task>
-    <task id="LOCAL-00004" summary="handle exception">
-      <created>1568549467615</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1568549467615</updated>
-    </task>
-    <task id="LOCAL-00005" summary="custom exception">
-      <created>1568549542008</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1568549542008</updated>
-    </task>
-    <task id="LOCAL-00006" summary="request/response logger">
-      <created>1568549614057</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1568549614057</updated>
-    </task>
-    <task id="LOCAL-00007" summary="readme">
-      <created>1568614667859</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1568614667860</updated>
-    </task>
-    <task id="LOCAL-00008" summary="database">
-      <created>1568614981348</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1568614981348</updated>
-    </task>
-    <task id="LOCAL-00009" summary="controller">
-      <created>1568618109542</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1568618109542</updated>
-    </task>
-    <task id="LOCAL-00010" summary="entity">
-      <created>1568618146400</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1568618146400</updated>
-    </task>
-    <task id="LOCAL-00011" summary="repository">
-      <created>1568618180974</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1568618180974</updated>
-    </task>
-    <task id="LOCAL-00012" summary="service">
-      <created>1568618209074</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1568618209074</updated>
-    </task>
-    <task id="LOCAL-00013" summary="utils">
-      <created>1568618295482</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1568618295482</updated>
-    </task>
-    <task id="LOCAL-00014" summary="redis">
-      <created>1568635677062</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1568635677062</updated>
-    </task>
-    <task id="LOCAL-00015" summary="log">
-      <created>1568701537546</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1568701537546</updated>
-    </task>
-    <task id="LOCAL-00016" summary="custom read yml">
-      <created>1568701609425</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1568701609425</updated>
-    </task>
-    <task id="LOCAL-00017" summary="result">
-      <created>1568701650190</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1568701650190</updated>
+      <workItem from="1569203361918" duration="24810000" />
+      <workItem from="1569285124118" duration="7363000" />
+      <workItem from="1569295967982" duration="355000" />
+      <workItem from="1569296346580" duration="24841000" />
+      <workItem from="1569384944709" duration="3430000" />
+      <workItem from="1569409269049" duration="7171000" />
+      <workItem from="1569489035975" duration="17046000" />
+      <workItem from="1569717016797" duration="3976000" />
+      <workItem from="1569738686345" duration="584000" />
+      <workItem from="1569744575717" duration="294000" />
+      <workItem from="1569745539713" duration="19895000" />
+      <workItem from="1570494477819" duration="366000" />
+      <workItem from="1570494935579" duration="1920000" />
+      <workItem from="1570504258198" duration="6817000" />
+      <workItem from="1570522806859" duration="25395000" />
+      <workItem from="1570611017991" duration="2760000" />
+      <workItem from="1570620487846" duration="267000" />
+      <workItem from="1573545438525" duration="1550000" />
+      <workItem from="1573548473955" duration="4094000" />
+      <workItem from="1573614062425" duration="1805000" />
+      <workItem from="1573615905252" duration="3355000" />
+      <workItem from="1573691173550" duration="680000" />
+      <workItem from="1574913166937" duration="13172000" />
     </task>
     <task id="LOCAL-00018" summary="aspect">
       <created>1568701843748</created>
@@ -473,7 +421,231 @@
       <option name="project" value="LOCAL" />
       <updated>1569159079415</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="shiro">
+      <created>1569230383887</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1569230383888</updated>
+    </task>
+    <task id="LOCAL-00036" summary="lombok">
+      <created>1569230662344</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1569230662344</updated>
+    </task>
+    <task id="LOCAL-00037" summary="cas">
+      <created>1569240293334</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1569240293334</updated>
+    </task>
+    <task id="LOCAL-00038" summary="pageable">
+      <created>1569311476874</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1569311476874</updated>
+    </task>
+    <task id="LOCAL-00039" summary=".">
+      <created>1569314864313</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1569314864313</updated>
+    </task>
+    <task id="LOCAL-00040" summary="cors filter">
+      <created>1569319331036</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1569319331036</updated>
+    </task>
+    <task id="LOCAL-00041" summary="front router axios">
+      <created>1569319379184</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1569319379184</updated>
+    </task>
+    <task id="LOCAL-00042" summary="cas">
+      <created>1569319400005</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1569319400005</updated>
+    </task>
+    <task id="LOCAL-00043" summary="banner">
+      <created>1569409629326</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1569409629326</updated>
+    </task>
+    <task id="LOCAL-00044" summary="remarks">
+      <created>1569409682810</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1569409682810</updated>
+    </task>
+    <task id="LOCAL-00045" summary="front">
+      <created>1569413670459</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1569413670459</updated>
+    </task>
+    <task id="LOCAL-00046" summary="front">
+      <created>1569413731866</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1569413731866</updated>
+    </task>
+    <task id="LOCAL-00047" summary="front">
+      <created>1569500164659</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1569500164659</updated>
+    </task>
+    <task id="LOCAL-00048" summary="cas">
+      <created>1569500206283</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1569500206283</updated>
+    </task>
+    <task id="LOCAL-00049" summary="config">
+      <created>1569577636020</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1569577636020</updated>
+    </task>
+    <task id="LOCAL-00050" summary="mybatis-plus">
+      <created>1569577786708</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1569577786713</updated>
+    </task>
+    <task id="LOCAL-00051" summary=".">
+      <created>1569577800434</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1569577800434</updated>
+    </task>
+    <task id="LOCAL-00052" summary=".">
+      <created>1569750358380</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1569750358383</updated>
+    </task>
+    <task id="LOCAL-00053" summary=".">
+      <created>1569833666065</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1569833666065</updated>
+    </task>
+    <task id="LOCAL-00054" summary="cas">
+      <created>1569833718407</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1569833718407</updated>
+    </task>
+    <task id="LOCAL-00055" summary="clear front">
+      <created>1569833955740</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1569833955741</updated>
+    </task>
+    <task id="LOCAL-00056" summary="cas front">
+      <created>1569833993137</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1569833993137</updated>
+    </task>
+    <task id="LOCAL-00057" summary="redis">
+      <created>1570528581047</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1570528581048</updated>
+    </task>
+    <task id="LOCAL-00058" summary="front">
+      <created>1570528605392</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1570528605392</updated>
+    </task>
+    <task id="LOCAL-00059" summary="filter">
+      <created>1570528637675</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1570528637675</updated>
+    </task>
+    <task id="LOCAL-00060" summary="init .">
+      <created>1570528707729</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1570528707730</updated>
+    </task>
+    <task id="LOCAL-00061" summary="cas">
+      <created>1570528720163</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1570528720163</updated>
+    </task>
+    <task id="LOCAL-00062" summary="date utils">
+      <created>1570605118510</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1570605118510</updated>
+    </task>
+    <task id="LOCAL-00063" summary="client platform">
+      <created>1570608101324</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1570608101324</updated>
+    </task>
+    <task id="LOCAL-00064" summary="ticket effective timeout">
+      <created>1570608201140</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1570608201141</updated>
+    </task>
+    <task id="LOCAL-00065" summary="create ticket ,verify ticket">
+      <created>1570608352431</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1570608352432</updated>
+    </task>
+    <task id="LOCAL-00066" summary="redis utils">
+      <created>1570608392363</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1570608392363</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,55 +665,40 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="entity" />
-    <MESSAGE value="repository" />
-    <MESSAGE value="service" />
-    <MESSAGE value="utils" />
-    <MESSAGE value="redis" />
-    <MESSAGE value="log" />
-    <MESSAGE value="custom read yml" />
-    <MESSAGE value="result" />
-    <MESSAGE value="aspect" />
-    <MESSAGE value="config" />
-    <MESSAGE value="add" />
-    <MESSAGE value="encrypt" />
-    <MESSAGE value="shiro" />
-    <MESSAGE value="Structural optimization" />
-    <MESSAGE value="readme" />
-    <MESSAGE value="other" />
-    <MESSAGE value="cas init" />
-    <MESSAGE value="httpUtils" />
-    <MESSAGE value="GoogleStyle&#10;SimpleCheckStyle" />
-    <MESSAGE value="google checkstyle" />
-    <MESSAGE value="jsonUtil toBean toJson" />
-    <MESSAGE value="." />
     <MESSAGE value="front build" />
     <MESSAGE value="cas logic" />
     <MESSAGE value="lombok&#10;repair" />
-    <option name="LAST_COMMIT_MESSAGE" value="lombok&#10;repair" />
+    <MESSAGE value="shiro" />
+    <MESSAGE value="lombok" />
+    <MESSAGE value="pageable" />
+    <MESSAGE value="cors filter" />
+    <MESSAGE value="front router axios" />
+    <MESSAGE value="banner" />
+    <MESSAGE value="remarks" />
+    <MESSAGE value="config" />
+    <MESSAGE value="mybatis-plus" />
+    <MESSAGE value="." />
+    <MESSAGE value="clear front" />
+    <MESSAGE value="cas front" />
+    <MESSAGE value="redis" />
+    <MESSAGE value="front" />
+    <MESSAGE value="filter" />
+    <MESSAGE value="init ." />
+    <MESSAGE value="cas" />
+    <MESSAGE value="date utils" />
+    <MESSAGE value="client platform" />
+    <MESSAGE value="ticket effective timeout" />
+    <MESSAGE value="create ticket ,verify ticket" />
+    <MESSAGE value="redis utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="redis utils" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/learn/demo/UserServiceTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/learn/demo/HttpUtilsTest.java</url>
@@ -549,14 +706,14 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/utils/RedisUtils.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="43" />
+          <line>95</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -566,6 +723,11 @@
       </configuration>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="shiroFilter" language="JAVA" />
+        <watch expression="PlatformEnum.valueOf(client.getAppPlatform())" language="JAVA" />
+        <watch expression="PlatformEnum.values()" language="JAVA" />
+        <watch expression="PlatformEnum.valueOf(&quot;NET&quot;)" language="JAVA" />
+        <watch expression="data" language="JAVA" custom="org.springframework.web.servlet.tags.EditorAwareTag" />
+        <watch expression="clientModel" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

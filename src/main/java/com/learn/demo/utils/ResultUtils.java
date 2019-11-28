@@ -14,11 +14,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ResultUtils {
 
-  public static ResultModel isOK() {
+  public static ResultModel isOk() {
     return new ResultModel(ResultEnum.SUCCESS, null);
   }
 
-  public static ResultModel isOK(Object data) {
+  public static ResultModel isOk(Object data) {
     return new ResultModel(ResultEnum.SUCCESS, data);
   }
 

@@ -17,13 +17,9 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource(value = {
     "classpath:system.yml"}, factory = YmlFactoryUtils.class, encoding = "utf-8")
-//引入配置文件路径,只支持.properties
-//@PropertySource(value = {"classpath:system.properties"},encoding = "utf-8")
-@ConfigurationProperties(prefix = "system") //和配置文件绑定，类中属性和配置文件必须一致才能注入
+@ConfigurationProperties(prefix = "system")
 public class SystemConfigModel {
 
-  //@Value配合 @PropertySource
-  //@Value("${system.redisTimeOut}")
   private Integer redisTimeOut;
 
   private String encryptKey;

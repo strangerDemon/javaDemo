@@ -14,5 +14,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClientAppRepository extends JpaRepository<ClientAppEntity, String> {
 
+  /**
+   * .
+   * @param loginUrl 客户端地址
+   * @return 客户端对象
+   */
   ClientAppEntity getByAppLoginUrl(String loginUrl);
 }

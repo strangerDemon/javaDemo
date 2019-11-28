@@ -32,7 +32,7 @@ public class Jurisdiction {
    * @return 用户账号
    */
   public static String getAccount() {
-    return getSession().getAttribute(ConstUtils.ShiroAccount).toString();
+    return getSession().getAttribute(ConstUtils.SHIRO_ACCOUNT).toString();
   }
 
   /**
@@ -41,7 +41,7 @@ public class Jurisdiction {
    */
   public static UserEntity getUser() {
     return JsonUtils
-        .toBean(getSession().getAttribute(ConstUtils.ShiroUser).toString(), UserEntity.class);
+        .toBean(getSession().getAttribute(ConstUtils.SHIRO_USER).toString(), UserEntity.class);
   }
 
 }

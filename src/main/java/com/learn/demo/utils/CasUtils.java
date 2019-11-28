@@ -51,7 +51,7 @@ public class CasUtils {
    * @return 票据
    */
   private String createTicket() {
-    return ConstUtils.TicketHead + UUID.randomUUID();
+    return ConstUtils.TICKET_HEAD + UUID.randomUUID();
   }
 
   /**
@@ -66,7 +66,7 @@ public class CasUtils {
     String code = data.get("code").toString();
     String clientSessionId = data.get("sessionId").toString();
 
-    if (ticket.equals("") || service.equals("") || code.equals("")) {
+    if ("".equals(ticket) || "".equals(service) || "".equals(code)) {
       throw new MyExceptionModel("验证票据参数不对");
     }
 
@@ -90,7 +90,8 @@ public class CasUtils {
       redisTicketUtils.delete(ticket);
       if (clientModel.getTicketValidated().equals(-1)) {
         Map<String, RedisClientModel> clients = user.getClients();
-        clients.remove(service);//移除旧的
+        //移除旧的
+        clients.remove(service);
 
         clientModel.setTicketValidated(1);
         clientModel.setTicketValidateTime(new Date());
@@ -117,8 +118,8 @@ public class CasUtils {
 
         clients.put(service, clientModel);
         user.setClients(clients);
-
-        redisUserUtils.update(user);//添加编辑后的
+        //添加编辑后的
+        redisUserUtils.update(user);
 
         if (clientModel.getTicketValidated().equals(1)) {
           return user;

@@ -28,11 +28,14 @@ public class ClientAppAuthService {
   private ClientAppAuthMapper clientAppAuthMapper;
 
   //region
+
   public ClientAppAuthEntity getOne(String s) {
     return clientAppAuthRepository.getOne(s);
   }
 
-  //todo：data mapper
+  /**
+   * todo：data mapper.
+   */
   public Page<ClientAppAuthEntity> findAll(Map data, Pageable pageable) {
     return clientAppAuthRepository.findAll(pageable);
   }

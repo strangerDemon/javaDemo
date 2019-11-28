@@ -12,9 +12,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConstUtils {
 
-  public static final String TicketHead = "ST_"; //票据头
+  /**
+   * 票据头.
+   */
+  public static final String TICKET_HEAD = "ST_";
 
-  public static final String ShiroUser = "Shiro_User";//shiro 用户对象信息
+  /**
+   * shiro 用户对象信息.
+   */
+  public static final String SHIRO_USER = "Shiro_User";
 
-  public static final String ShiroAccount = "Shiro_Account";//shiro账号
+  /**
+   * shiro账号.
+   */
+  public static final String SHIRO_ACCOUNT = "Shiro_Account";
 }

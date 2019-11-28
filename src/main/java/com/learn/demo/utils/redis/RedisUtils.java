@@ -102,7 +102,7 @@ public class RedisUtils {
    * @return map
    */
   public Map getAll(Set<String> keys) {
-    Map<String, String> data = new HashMap<>();
+    Map<String, String> data = new HashMap<>(keys.size());
     for (String key : keys) {
       data.put(key, stringRedisTemplate.opsForValue().get(key));
     }

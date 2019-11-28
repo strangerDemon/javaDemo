@@ -11,6 +11,9 @@ import lombok.Setter;
  * @date
  */
 public enum ResultEnum {
+  /**
+   * 接口返回类型.
+   */
   UNKNOWN(-1, "未知"),
   ERROR(0, "失败"),
   SUCCESS(1, "成功");

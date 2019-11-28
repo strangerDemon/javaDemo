@@ -15,7 +15,9 @@ import org.apache.ibatis.annotations.Param;
 public interface ClientAppMapper extends BaseMapper<ClientAppEntity> {
 
   /**
-   * 获取脱衣服权限类的客户端.
+   * 获取客户端权限类的客户端.
+   * @param userId 用户id
+   * @return 客户端列表
    */
   List<ClientAppEntity> findAuthClients(@Param("userId") String userId);
 }

@@ -12,5 +12,10 @@ import com.learn.demo.entity.ClientAppAuthEntity;
  */
 public interface ClientAppAuthMapper extends BaseMapper<ClientAppAuthEntity> {
 
+  /**
+   * 获取客户端权限.
+   * @param entity 客户端
+   * @return ClientAppAuthEntity
+   */
   ClientAppAuthEntity getClientAuth(ClientAppAuthEntity entity);
 }

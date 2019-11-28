@@ -24,7 +24,7 @@ public class RedisUserUtils {
    */
   public RedisUserModel getUserOfUserId(String userId) {
     String sessionId = redisUtils.get(userId);
-    if (sessionId == null || sessionId.equals("")) {
+    if (sessionId == null || "".equals(sessionId)) {
       return null;
     }
     return getUserOfSessionId(sessionId);
@@ -35,7 +35,7 @@ public class RedisUserUtils {
    */
   public RedisUserModel getUserOfSessionId(String sessionId) {
     String userJson = redisUtils.get(sessionId);
-    if (userJson == null || userJson.equals("")) {
+    if (userJson == null || "".equals(userJson)) {
       return null;
     }
     return JsonUtils.toBean(userJson, RedisUserModel.class);
@@ -55,7 +55,7 @@ public class RedisUserUtils {
    */
   public void update(RedisUserModel redisUser) {
     String sessionId = redisUtils.get(redisUser.getUserId());
-    if (sessionId == null || sessionId.equals("")) {
+    if (sessionId == null || "".equals(sessionId)) {
       throw new MyExceptionModel("redis更新用户信息异常:找不到sessionId");
     }
     redisUtils.set(redisUser.getUserId(),sessionId);

@@ -29,16 +29,18 @@ public class ShiroUtils {
     UsernamePasswordToken token = new UsernamePasswordToken(user.getAccount(), user.getPassword());
     Subject subject = SecurityUtils.getSubject();
     try {
-      subject.login(token);  //这一步在调用login(token)方法时,它会走到MyRealm.doGetAuthenticationInfo()方法中
+      //这一步在调用login(token)方法时,它会走到MyRealm.doGetAuthenticationInfo()方法中
+      subject.login(token);
     } catch (Exception ex) {
       throw new MyExceptionModel(ex.getMessage());
     }
-    if (subject.isAuthenticated()) {              //验证是否登录成功
+    //验证是否登录成功
+    if (subject.isAuthenticated()) {
       Session session = Jurisdiction.getSession();
-      session.removeAttribute(ConstUtils.ShiroAccount);
-      session.removeAttribute(ConstUtils.ShiroUser);
-      session.setAttribute(ConstUtils.ShiroUser, user);
-      session.setAttribute(ConstUtils.ShiroAccount, user.getAccount());
+      session.removeAttribute(ConstUtils.SHIRO_ACCOUNT);
+      session.removeAttribute(ConstUtils.SHIRO_USER);
+      session.setAttribute(ConstUtils.SHIRO_USER, user);
+      session.setAttribute(ConstUtils.SHIRO_ACCOUNT, user.getAccount());
     } else {
       token.clear();
       throw new MyExceptionModel("尝试登录系统失败,无权限");

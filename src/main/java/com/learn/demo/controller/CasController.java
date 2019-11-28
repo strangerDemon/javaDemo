@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -25,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "CAS管理接口")
 @RestController
-@RequestMapping("/Cas")
+@RequestMapping("Cas")
 public class CasController {
 
   @Resource
@@ -46,13 +47,13 @@ public class CasController {
    * @return 用户信息
    */
   @ApiOperation(value = "客户端是否登录")
-  @RequestMapping("/IsLogin")
+  @RequestMapping("IsLogin")
   public ResultModel isLogin() {
     RedisUserModel redisUser = redisUserUtils.getUserOfSessionId(session.getId());
     if (redisUser == null) {
-      return ResultUtils.isOK("未登录");
+      return ResultUtils.isOk("未登录");
     }
-    return ResultUtils.isOK(redisUser);
+    return ResultUtils.isOk(redisUser);
   }
 
   /**
@@ -61,12 +62,12 @@ public class CasController {
    * @return 票据
    */
   @ApiOperation(value = "客户端获取票据")
-  @RequestMapping("/GetTicket")
+  @RequestMapping(value = "GetTicket", method = RequestMethod.GET)
   public ResultModel getTicket(@RequestBody Map data) {
+    //数据库中的客户端对象
+    ClientAppEntity client = clientAppService.checkService(data);
 
-    ClientAppEntity client = clientAppService.checkService(data);//数据库中的客户端对象
-
-    return ResultUtils.isOK(casUtils.getTicket(session.getId(), client, data));
+    return ResultUtils.isOk(casUtils.getTicket(session.getId(), client, data));
   }
 
   /**
@@ -76,8 +77,10 @@ public class CasController {
    * @return 用户信息
    */
   @ApiOperation(value = "客户端校验票据")
-  @RequestMapping("/VerifyTicket")
+  @RequestMapping("VerifyTicket")
   public ResultModel verifyTicket(@RequestBody Map data) {
-    return ResultUtils.isOK(casUtils.verifyTicket(data));
+    RedisUserModel redisUser = casUtils.verifyTicket(data);
+    redisUser.setClients(null);
+    return ResultUtils.isOk(redisUser);
   }
 }

@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -27,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "CAS客户端管理接口")
 @RestController
-@RequestMapping("/ClientApp")
+@RequestMapping("ClientApp")
 public class ClientAppController {
 
   @Resource
@@ -49,9 +50,9 @@ public class ClientAppController {
    * @return 客户端列表
    */
   @ApiOperation(value = "获取接入的客户端")
-  @RequestMapping("/GetList")
+  @RequestMapping(value = "GetList", method = RequestMethod.GET)
   public ResultModel getClientAppList(@RequestBody Map data, Pageable pageable) {
-    return ResultUtils.isOK(clientAppService.findAll(data, pageable));
+    return ResultUtils.isOk(clientAppService.findAll(data, pageable));
   }
   //endregion
 
@@ -61,14 +62,14 @@ public class ClientAppController {
    * @return 客户端列表
    */
   @ApiOperation(value = "获取权限客户端")
-  @RequestMapping("/GetMyList")
+  @RequestMapping(value = "GetMyList", method = RequestMethod.GET)
   public ResultModel getAuthClientAppList() {
     RedisUserModel user = redisUserUtils.getUserOfSessionId(session.getId());
     if (user == null) {
       throw new MyExceptionModel("账号未登录");
     }
     List<ClientAppEntity> list = clientAppService.findAuthClients(user.getUserId());
-    return ResultUtils.isOK(list);
+    return ResultUtils.isOk(list);
   }
 
   /**
@@ -80,6 +81,6 @@ public class ClientAppController {
   @ApiOperation(value = "创建客户端")
   @RequestMapping("Add")
   public ResultModel addClientApp(@RequestBody ClientAppEntity entity) {
-    return ResultUtils.isOK(clientAppService.addClientApp(entity));
+    return ResultUtils.isOk(clientAppService.addClientApp(entity));
   }
 }

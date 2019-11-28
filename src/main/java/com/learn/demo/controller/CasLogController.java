@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "CAS登录日志管理接口")
 @RestController
-@RequestMapping("/CasLog")
+@RequestMapping("CasLog")
 public class CasLogController {
 
   @Resource
@@ -35,8 +36,8 @@ public class CasLogController {
    * @return 日志列表
    */
   @ApiOperation(value = "获取cas登录日志")
-  @RequestMapping("/GetList")
+  @RequestMapping(value = "GetList", method = RequestMethod.GET)
   public ResultModel getCasLogList(@RequestBody Map data, Pageable pageable) {
-    return ResultUtils.isOK(casLogService.findAll(data, pageable));
+    return ResultUtils.isOk(casLogService.findAll(data, pageable));
   }
 }

@@ -11,6 +11,9 @@ import lombok.Setter;
  * @date 2019/10/9 14:58
  */
 public enum PlatformEnum {
+  /**
+   * NET JAVA PHP Default sessionId.
+   */
   NET(".net", "ASP.NET_SessionId"),
   JAVA("java", "JSESSIONID"),
   PHP("php", "session_id"),

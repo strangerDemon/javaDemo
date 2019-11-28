@@ -9,4 +9,5 @@
     FROM
         ClientAppAuth auth
     </select>
+  <select id="getClientAuth" resultType="com.learn.demo.entity.ClientAppAuthEntity"/>
 </mapper>
