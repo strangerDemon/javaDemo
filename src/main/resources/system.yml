@@ -7,3 +7,18 @@ system:
   casFrontUrl: "http://localhost:9000,http://192.168.3.105:9000,http://www.xxx.com" #cas 前端部署地址
 
   ticketEffectiveTimeOut: 10 #ticket 有效时长 单位s
+
+thread:
+  corePoolSize: 10 #核心线程数
+
+  maxPoolSize: 20 #最大线程数
+
+  queueCapacity: 200 #缓冲队列
+
+  keepAliveSeconds: 60 #允许线程的空闲时间
+
+  namePrefix: "taskExecutor-" #线程前缀
+
+  waitForTasksToCompleteOnShutdown: true # 线程池关闭 的时候 等待 所有任务都完成后，再继续 销毁 其他的 Bean
+
+  waitTerminationSeconds: 60 # 任务的等待时间
