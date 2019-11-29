@@ -26,4 +26,9 @@ public class ConstUtils {
    * shiro账号.
    */
   public static final String SHIRO_ACCOUNT = "Shiro_Account";
+
+  /**
+   * session 账号.
+   */
+  public static final String SESSION_USER = "session_user";
 }

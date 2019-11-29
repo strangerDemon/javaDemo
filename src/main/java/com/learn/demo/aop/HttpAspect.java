@@ -1,6 +1,8 @@
 package com.learn.demo.aop;
 
+import com.learn.demo.utils.ConstUtils;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -55,6 +57,9 @@ public class HttpAspect {
         joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
     //类
     log.info("args={}", joinPoint.getArgs());
+    //用户信息
+    HttpSession session = request.getSession();
+    log.info("userInfo={}", session.getAttribute(ConstUtils.SESSION_USER));
   }
 
   /**
