@@ -57,7 +57,7 @@
             <version>7.4.1.jre8</version>
         </dependency>
 
-        <!-- aop 统一日志管理系统-->
+        <!-- aop -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -115,6 +115,13 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>2.7.0</version>
+        </dependency>
+
+        <!-- dozer 实体间转换工具 -->
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.4.0</version>
         </dependency>
     </dependencies>
 

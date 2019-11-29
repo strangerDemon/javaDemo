@@ -4,44 +4,12 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="create ticket ,verify ticket">
+    <list default="true" id="a175be7f-4365-4432-abc7-d3b3a48a5d34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/store/modules/cas.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/store/modules/cas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/aop/HttpAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/aop/HttpAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/config/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasClientLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasClientLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/CasLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppAuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/ClientAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasClientLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasClientLogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/CasLogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppAuthEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppAuthEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/entity/ClientAppEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/PlatformEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/PlatformEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppAuthMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppAuthMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/mapper/ClientAppMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/RedisClientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/RedisClientModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/SystemConfigModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/model/SystemConfigModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasClientLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/CasClientLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppAuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/ClientAppRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/ClientAppAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/CasUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ConstUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ConstUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/EncryptUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/ResultUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUserUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/redis/RedisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/Jurisdiction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/Jurisdiction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/ShiroUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/demo/utils/shiro/ShiroUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClientAppAuthMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClientAppAuthMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/system.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/system.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learn/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learn/demo/DemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,18 +76,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.24096386" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources\mapper" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\src\main\resources" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
       <recent name="E:\GitHub\java\Spring-Boot-Demo\db" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\GitHub\java\Spring-Boot-Demo\xml" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -144,7 +112,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
+  <component name="RunManager" selected="JUnit.DemoApplicationTests.testListener">
+    <configuration name="DemoApplicationTests.testListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="testListener" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DozerTest.dozerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spring-Boot-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.demo.DozerTest" />
+      <option name="METHOD_NAME" value="dozerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ScheduleTest.cronJob" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spring-Boot-Demo" />
       <extension name="coverage">
@@ -177,22 +177,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskTest.testAsyncCallBackTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spring-Boot-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.TaskTest" />
-      <option name="METHOD_NAME" value="testAsyncCallBackTask" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TaskTest.testAsyncExecutorTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spring-Boot-Demo" />
       <extension name="coverage">
@@ -209,22 +193,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskTest.testTaskAsync" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spring-Boot-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learn.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.demo.TaskTest" />
-      <option name="METHOD_NAME" value="testTaskAsync" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Spring-Boot-Demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.demo.DemoApplication" />
@@ -235,20 +203,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.DemoApplication" />
-      <item itemvalue="JUnit.TaskTest.testTaskAsync" />
-      <item itemvalue="JUnit.TaskTest.testAsyncCallBackTask" />
       <item itemvalue="JUnit.TaskTest.testAsyncExecutorTask" />
       <item itemvalue="JUnit.ScheduleTest.cronJob" />
       <item itemvalue="JUnit.ScheduleTest.testScheduleJob" />
+      <item itemvalue="JUnit.DozerTest.dozerTest" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="JUnit.DemoApplicationTests.testListener" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DemoApplicationTests.testListener" />
+        <item itemvalue="JUnit.DozerTest.dozerTest" />
         <item itemvalue="JUnit.ScheduleTest.testScheduleJob" />
         <item itemvalue="JUnit.ScheduleTest.cronJob" />
         <item itemvalue="JUnit.TaskTest.testAsyncExecutorTask" />
-        <item itemvalue="JUnit.TaskTest.testAsyncCallBackTask" />
-        <item itemvalue="JUnit.TaskTest.testTaskAsync" />
       </list>
     </recent_temporary>
   </component>
@@ -300,21 +268,8 @@
       <workItem from="1573614062425" duration="1805000" />
       <workItem from="1573615905252" duration="3355000" />
       <workItem from="1573691173550" duration="680000" />
-      <workItem from="1574913166937" duration="13172000" />
-    </task>
-    <task id="LOCAL-00018" summary="aspect">
-      <created>1568701843748</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1568701843748</updated>
-    </task>
-    <task id="LOCAL-00019" summary="config">
-      <created>1568712776825</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1568712776825</updated>
+      <workItem from="1574913166937" duration="20754000" />
+      <workItem from="1575012052892" duration="6829000" />
     </task>
     <task id="LOCAL-00020" summary="add">
       <created>1568712918268</created>
@@ -645,7 +600,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570608392363</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="格式优化">
+      <created>1574935807059</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1574935807059</updated>
+    </task>
+    <task id="LOCAL-00068" summary="task 、schedule">
+      <created>1574935842264</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1574935842264</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,8 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="front build" />
-    <MESSAGE value="cas logic" />
     <MESSAGE value="lombok&#10;repair" />
     <MESSAGE value="shiro" />
     <MESSAGE value="lombok" />
@@ -690,7 +657,9 @@
     <MESSAGE value="ticket effective timeout" />
     <MESSAGE value="create ticket ,verify ticket" />
     <MESSAGE value="redis utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis utils" />
+    <MESSAGE value="格式优化" />
+    <MESSAGE value="task 、schedule" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 、schedule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
